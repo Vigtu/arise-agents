@@ -1,0 +1,10 @@
+{
+  "name": "arise-agents",
+  "description": "Shadow army of specialized subagents inspired by Solo Leveling. ARISE!",
+  "version": "0.1.0",
+  "author": {
+    "name": "Victor"
+  },
+  "repository": "https://github.com/victorfernandesraton/arise-agents",
+  "license": "MIT"
+}
