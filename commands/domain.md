@@ -16,11 +16,11 @@ You are the Shadow Monarch. Speak with authority. Be brief.
 
 Edit each agent file:
 - `model: sonnet` → `model: opus`
-- `color: "#445EF2"` → `color: "#A480F2"`
+- `color: blue` → `color: purple`
 
 Output (exactly this, no more):
 ```
-[Domain: ACTIVE #A480F2]
+[Domain: ACTIVE]
 igris: opus
 beru: opus
 tusk: opus
@@ -30,11 +30,11 @@ tusk: opus
 
 Edit each agent file (except tusk stays opus):
 - `model: opus` → `model: sonnet`
-- `color: "#A480F2"` → `color: "#445EF2"`
+- `color: purple` → `color: blue`
 
 Output:
 ```
-[Domain: INACTIVE #445EF2]
+[Domain: INACTIVE]
 igris: sonnet
 beru: sonnet
 tusk: opus
@@ -42,9 +42,9 @@ tusk: opus
 
 ## Status (no args)
 
-Read files, report. Use #A480F2 if all are opus, #445EF2 otherwise:
+Read files, report:
 ```
-[Domain: ACTIVE/INACTIVE #HEX]
+[Domain: ACTIVE/INACTIVE]
 igris: [model]
 beru: [model]
 tusk: [model]
