@@ -6,16 +6,29 @@ Shadow army of specialized subagents for Claude Code, inspired by Solo Leveling.
 
 ## Installation
 
-### From GitHub (recommended)
+### Option 1: Clone and load
 
 ```bash
-claude plugin add victorfernandesraton/arise-agents
+git clone https://github.com/victorfernandesraton/arise-agents.git
+cd your-project
+claude --plugin-dir /path/to/arise-agents
 ```
 
-### Local development
+### Option 2: Add to settings
+
+Add to your `.claude/settings.json`:
+
+```json
+{
+  "plugins": ["/path/to/arise-agents"]
+}
+```
+
+### Option 3: Development mode
 
 ```bash
-claude --plugin-dir ./arise-agents
+cd arise-agents
+claude --plugin-dir .
 ```
 
 ## Shadows
@@ -25,27 +38,51 @@ claude --plugin-dir ./arise-agents
 | **Igris** | Knight Commander | Code review, quality enforcement |
 | **Beru** | Ant King | Aggressive research, deep exploration |
 | **Tusk** | High Orc Tank | Heavy lifting, large refactors |
+| **Soldiers** | Infantry | Parallel reconnaissance |
 
 ## Usage
 
-Claude automatically delegates to shadows based on task context. You can also request explicitly:
+### Summon shadows
 
 ```
-Use igris to review my authentication changes
-Have beru explore how the payment system works
-Ask tusk to refactor the legacy module
+ARISE review my auth code        → Igris reviews
+ARISE explore the payment system → Beru investigates
+ARISE refactor the user module   → Tusk transforms
 ```
+
+### Multiply elites
+
+```
+3 beru para explorar auth, cache e logging
+igris x5 review all modules
+```
+
+### Deploy army
+
+```
+5 soldiers to analyze the codebase
+```
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `/arise` | Summon shadows based on natural language |
+| `/shadows` | Display shadow army roster |
+| `/domain` | Toggle Monarch's Domain (opus mode) |
+| `/extract` | Create new shadow from patterns |
 
 ## Adding new shadows
 
-Create a markdown file in `.claude/agents/` with YAML frontmatter:
+Create `.claude/agents/shadow-name.md`:
 
-```markdown
+```yaml
 ---
 name: shadow-name
-description: When Claude should use this shadow
+description: When to use this shadow
 tools: Read, Grep, Glob
 model: sonnet
+role: knight | researcher | tank | infantry
 ---
 
 System prompt here...
