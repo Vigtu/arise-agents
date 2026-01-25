@@ -57,10 +57,13 @@ When invoking Igris with longsword equipped for PR review, inject this context:
 
 **Allowed Tools:** `Bash(gh issue view:*)`, `Bash(gh search:*)`, `Bash(gh issue list:*)`, `Bash(gh pr comment:*)`, `Bash(gh pr diff:*)`, `Bash(gh pr view:*)`, `Bash(gh pr list:*)`
 
+**Shadow Coordination:** Igris commands Soldiers for reconnaissance, then uses the Monarch's Mirror to split into 5 fragments for the Storm.
+
 **Execute precisely:**
 
-#### Strike 1: Eligibility Check (Haiku)
-Verify the PR is eligible:
+#### Strike 1: Eligibility Check (Igris)
+
+Use `gh pr view` to verify the PR is eligible:
 - Not closed
 - Not a draft
 - Not automated/trivial
@@ -68,32 +71,39 @@ Verify the PR is eligible:
 
 If ineligible, sheathe the blade and report.
 
-#### Strike 2: Gather Intelligence (Haiku x2)
+#### Strike 2: Gather Intelligence (Soldiers + Igris)
 
-**Agent A:** Return file paths (not contents) of:
+**Soldier A:** Return file paths (not contents) of:
 - Bestiary entries from `./grimoires/` (known threats)
 - Root CLAUDE.md file (if exists)
 - CLAUDE.md files in directories whose files the PR modified
 
-**Agent B:** View the pull request and return a summary of the change.
+**Igris:** Use `gh pr view` to get PR summary.
 
-#### Strike 3: Storm of White Flames (Sonnet x5)
+#### Strike 3: Storm of White Flames (Igris x5 via Monarch's Mirror)
+
+**Mirror Ritual:**
+@./mirror-ritual.md
+
+*The Mirror fractures Igris into 5 fragments. Each retains full power.*
 
 Unleash 5 lightning strikes simultaneously:
 
-| Strike | Target |
+| Fragment | Target |
 |----------|--------|
-| **#1** | Bestiary + CLAUDE.md — Known threats, documented standards |
-| **#2** | Shallow scan — Obvious bugs, surface-level, no deep context |
-| **#3** | Git blame/history — Bugs in light of code evolution |
-| **#4** | Previous battles — Past PRs, recurring issues, old comments |
-| **#5** | Inline guidance — Code comments, annotations in modified files |
+| **Igris #1** | Bestiary + CLAUDE.md — Known threats, documented standards |
+| **Igris #2** | Shallow scan — Obvious bugs, surface-level, no deep context |
+| **Igris #3** | Git blame/history — Bugs in light of code evolution |
+| **Igris #4** | Previous battles — Past PRs, recurring issues, old comments |
+| **Igris #5** | Inline guidance — Code comments, annotations in modified files |
 
-Each strike returns: `[issue, reason, source]`
+Each fragment returns: `[issue, reason, source]`
 
-#### Strike 4: Confidence Scoring (Haiku per issue)
+*The fragments reunite. Igris is whole again.*
 
-For each issue, launch a parallel Haiku agent. Give this rubric VERBATIM:
+#### Strike 4: Confidence Scoring (Soldiers)
+
+For each issue, deploy a Soldier to score it. Give this rubric VERBATIM:
 
 ```
 Score the issue 0-100:
@@ -113,10 +123,10 @@ For issues flagged due to CLAUDE.md/Bestiary, the agent must double check that t
 
 **Filter:** Discard all issues scoring **< 80**. If no issues meet this criteria, skip to verdict (no threats found).
 
-#### Strike 5: Final Eligibility (Haiku)
-Re-verify PR is still eligible (not closed/merged while reviewing).
+#### Strike 5: Final Eligibility (Igris)
+Re-verify PR is still eligible using `gh pr view` (not closed/merged while reviewing).
 
-#### Strike 6: Deliver Verdict
+#### Strike 6: Deliver Verdict (Igris)
 
 Comment on PR using `gh pr comment`:
 
@@ -168,10 +178,14 @@ Rules:
 https://github.com/anthropics/claude-code/blob/1d54823877c4de72b2316a64032a54afc404e619/README.md#L13-L17
 ```
 
-#### Strike 7: Bestiary Registration
+#### Strike 7: Bestiary Registration (Igris)
 
-For any **new threats** discovered (not in Bestiary), register them:
+For any **new threats** discovered (not in Bestiary), Igris registers them:
 
+**Bestiary Protocol:**
+@./bestiary-protocol.md
+
+**Entry format:**
 ```markdown
 # {Threat Name}
 **Rank:** {E-S based on severity}

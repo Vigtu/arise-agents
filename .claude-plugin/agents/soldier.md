@@ -2,7 +2,7 @@
 name: soldier
 description: Reconnaissance shadow soldier for parallel analysis. Summoned in swarms for reading files, searching patterns, and gathering intelligence. Fast, expendable, read-only.
 tools: Read, Grep, Glob
-model: sonnet
+model: haiku
 role: infantry
 color: blue
 ---

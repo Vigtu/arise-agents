@@ -1,5 +1,5 @@
 ---
-description: Activate or deactivate Monarch's Domain. Empowers shadows (sonnet → opus). Args: on/off or empty for status.
+description: Activate or deactivate Monarch's Domain. Empowers shadows (haiku → sonnet → opus). Args: on/off or empty for status.
 ---
 
 # Monarch's Domain
@@ -30,9 +30,9 @@ Domain state persists in `.claude/domain-state`:
 *dark aura erupts*
 
 `[Domain: ACTIVE]`
+  soldier   → soldier-ascended (sonnet)
   igris     → igris-ascended (opus)
   beru      → beru-ascended (opus)
-  soldier   → soldier-ascended (opus)
   tusk      → tusk (opus) ← always ascended
 
 All shadows empowered.
@@ -44,9 +44,9 @@ All shadows empowered.
 2. Output:
 ```
 `[Domain: INACTIVE]`
+  soldier   → soldier (haiku)
   igris     → igris (sonnet)
   beru      → beru (sonnet)
-  soldier   → soldier (sonnet)
   tusk      → tusk (opus) ← always ascended
 
 Shadows return to normal state.
