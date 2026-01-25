@@ -1,1 +1,5 @@
-off
+domain: off
+equipment:
+  igris: null
+  beru: null
+  tusk: orb-of-avarice

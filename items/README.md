@@ -4,10 +4,11 @@
 
 ## Items
 
-| Item | Rank | Type | Protocol |
-|------|------|------|----------|
-| [Monarch's Mirror](./monarchs-mirror.md) | S | Artifact | `.claude/authority/mirror-ritual.md` |
-| [Bestiary](./bestiary.md) | A | Grimoire | `.claude/authority/bestiary-protocol.md` |
+| Item | Rank | Type | Protocol | Plugin |
+|------|------|------|----------|--------|
+| [Monarch's Mirror](./monarchs-mirror.md) | S | Artifact | `.claude/authority/mirror-ritual.md` | Built-in |
+| [Orb of Avarice](./orb-of-avarice.md) | S | Amplifier | `.claude/authority/orb-protocol.md` | `code-review@claude-plugins-official` |
+| [Bestiary](./bestiary.md) | A | Grimoire | `.claude/authority/bestiary-protocol.md` | Built-in |
 
 ## Structure
 

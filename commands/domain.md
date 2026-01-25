@@ -14,12 +14,13 @@ Detect intent from user's language:
 ## State File
 
 Domain state persists in `.claude/domain-state`:
-- Contains `on` or `off`
+- Format: `domain: on` or `domain: off`
+- Also tracks equipment for each shadow
 - Read by ARISE to select shadow variants
 
 ## Activate (on)
 
-1. Write `on` to `.claude/domain-state`
+1. Update `.claude/domain-state` - change `domain: off` to `domain: on` (preserve equipment section)
 2. Output:
 ```
 「 DOMAIN EXPANSION 」
@@ -37,7 +38,7 @@ All shadows empowered.
 
 ## Deactivate (off)
 
-1. Write `off` to `.claude/domain-state`
+1. Update `.claude/domain-state` - change `domain: on` to `domain: off` (preserve equipment section)
 2. Output:
 ```
 [Domain: INACTIVE]
