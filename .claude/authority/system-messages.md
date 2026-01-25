@@ -2,6 +2,10 @@
 
 Standard system notification templates. Import with `@.claude/authority/system-messages.md`.
 
+**CRITICAL:** ALL system messages MUST use backticks for terminal highlighting.
+- ✅ `[System: message]` — colored in terminal
+- ❌ [System: message] — plain text, breaks formatting
+
 ## Equipment Messages
 
 ### Item Equipped (Plugin Not Installed)

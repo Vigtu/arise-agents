@@ -1,5 +1,7 @@
 # Bestiary Protocol
 
+**CRITICAL:** All system messages MUST use backticks for terminal highlighting.
+
 After significant battles, register threats in `grimoires/`.
 
 **Entry format:**

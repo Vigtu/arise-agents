@@ -4,6 +4,8 @@ description: Activate or deactivate Monarch's Domain. Empowers shadows (sonnet �
 
 # Monarch's Domain
 
+**CRITICAL:** All system messages MUST use backticks for terminal highlighting.
+
 ## Parse Arguments
 
 Detect intent from user's language:
@@ -23,11 +25,11 @@ Domain state persists in `.claude/domain-state`:
 1. Update `.claude/domain-state` - change `domain: off` to `domain: on` (preserve equipment section)
 2. Output:
 ```
-「 DOMAIN EXPANSION 」
+`「 DOMAIN EXPANSION 」`
 
 *dark aura erupts*
 
-[Domain: ACTIVE]
+`[Domain: ACTIVE]`
   igris     → igris-ascended (opus)
   beru      → beru-ascended (opus)
   soldier   → soldier-ascended (opus)
@@ -41,7 +43,7 @@ All shadows empowered.
 1. Update `.claude/domain-state` - change `domain: on` to `domain: off` (preserve equipment section)
 2. Output:
 ```
-[Domain: INACTIVE]
+`[Domain: INACTIVE]`
   igris     → igris (sonnet)
   beru      → beru (sonnet)
   soldier   → soldier (sonnet)
@@ -55,7 +57,7 @@ Shadows return to normal state.
 1. Read `.claude/domain-state` (default: `off` if missing)
 2. Output:
 ```
-[Domain: ACTIVE/INACTIVE]
+`[Domain: ACTIVE/INACTIVE]`
   Shadows will use: {normal/ascended} variants
 ```
 

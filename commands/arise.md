@@ -4,6 +4,8 @@ description: Summon shadows. Analyzes natural language to pick single, parallel,
 
 # ARISE
 
+**CRITICAL:** All system messages MUST use backticks for terminal highlighting.
+
 ## Domain Check
 
 Before summoning, read `.claude/domain-state`:

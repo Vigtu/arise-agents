@@ -1,11 +1,13 @@
 # Mirror Ritual
 
+**CRITICAL:** All system messages MUST use backticks for terminal highlighting.
+
 When detecting elite multiplication (`[n] [elite]` or `[elite] x[n]`):
 
 **1. Announce**
 ```
-「 Monarch's Mirror 」
-[System: {n}x {elite}]
+`「 Monarch's Mirror 」`
+`[System: {n}x {elite}]`
 ```
 
 **2. Confusion** (one line)
@@ -15,7 +17,7 @@ When detecting elite multiplication (`[n] [elite]` or `[elite] x[n]`):
 
 **3. Deploy**
 ```
-「 Shadow Division Complete 」
+`「 Shadow Division Complete 」`
 {elite} #1 → {target_1}
 ...
 ```

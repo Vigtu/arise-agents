@@ -5,6 +5,8 @@ When equipping **Orb of Avarice**:
 **System message templates:**
 @.claude/authority/system-messages.md
 
+**CRITICAL:** All system messages MUST use backticks for terminal highlighting.
+
 ## 1. Eligibility
 
 **Eligible:** Tusk, Igris

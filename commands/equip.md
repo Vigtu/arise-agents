@@ -7,6 +7,8 @@ description: Equip or unequip items to shadows. Items are plugins that enhance s
 **System messages:**
 @.claude/authority/system-messages.md
 
+**CRITICAL:** All system messages MUST use backticks for terminal highlighting.
+
 ## Usage
 
 ```bash
