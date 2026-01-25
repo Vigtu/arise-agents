@@ -19,55 +19,139 @@ git log --oneline -5 2>/dev/null
 
 Read the recently modified files to understand what patterns emerged.
 
+If `$ARGUMENTS` is provided, use that as guidance for what to extract.
+
 ### Phase 2: Identify the Power
 
-Analyze the work and identify:
-- What specialized knowledge was gained?
-- What patterns were discovered?
-- What expertise would be valuable to preserve?
-
-If the user provided context via `$ARGUMENTS`, use that as guidance for what to extract.
-
-### Phase 3: Shape the Shadow
-
-Generate a shadow agent with:
-- **name**: lowercase-with-hyphens, thematic to the specialty
-- **description**: when Claude should summon this shadow (be specific)
-- **tools**: only what's needed (prefer minimal: Read, Grep, Glob, Bash)
-- **model**: sonnet for most, opus for complex reasoning tasks
-- **prompt**: detailed system prompt for the specialty
-
-### Phase 4: The Extraction
-
-Create the shadow file. Ask the user:
-
-"Where shall this shadow serve?"
-- **Project** (`.claude/agents/`) - serves only this realm
-- **Global** (`~/.claude/agents/`) - follows you everywhere
-
-Then use the Write tool to create the agent file.
-
-### Phase 5: Announce the Rising
-
-After creating the file, respond in character:
+Analyze the work and present findings to the user:
 
 ```
 [System: Analyzing defeated code...]
 [System: Pattern detected: {specialty}]
+```
+
+Then use AskUserQuestion to confirm:
+
+```
+AskUserQuestion({
+  questions: [{
+    question: "What power should be extracted from this shadow?",
+    header: "Specialty",
+    multiSelect: false,
+    options: [
+      { label: "{detected-specialty-1}", description: "{what it does}" },
+      { label: "{detected-specialty-2}", description: "{alternative}" },
+      { label: "Custom", description: "Define a different specialty" }
+    ]
+  }]
+})
+```
+
+### Phase 3: Shape the Shadow
+
+Use AskUserQuestion for shadow configuration:
+
+**Step 3a - Name the Shadow:**
+
+```
+AskUserQuestion({
+  questions: [{
+    question: "How shall this shadow be named?",
+    header: "Name",
+    multiSelect: false,
+    options: [
+      { label: "{thematic-name-1}", description: "Based on specialty" },
+      { label: "{thematic-name-2}", description: "Thematic alternative" },
+      { label: "{thematic-name-3}", description: "Creative option" }
+    ]
+  }]
+})
+```
+
+**Step 3b - Grant Tools:**
+
+```
+AskUserQuestion({
+  questions: [{
+    question: "Which tools should be granted to this shadow?",
+    header: "Tools",
+    multiSelect: true,
+    options: [
+      { label: "Read", description: "Read files" },
+      { label: "Grep + Glob", description: "Search the codebase" },
+      { label: "Bash", description: "Execute commands" },
+      { label: "Edit + Write", description: "Modify files" }
+    ]
+  }]
+})
+```
+
+**Step 3c - Set Power Level:**
+
+```
+AskUserQuestion({
+  questions: [{
+    question: "What power level?",
+    header: "Model",
+    multiSelect: false,
+    options: [
+      { label: "Sonnet (Recommended)", description: "Fast and efficient for most tasks" },
+      { label: "Opus", description: "Maximum power for complex reasoning" }
+    ]
+  }]
+})
+```
+
+### Phase 4: Choose the Realm
+
+Use AskUserQuestion for location:
+
+```
+AskUserQuestion({
+  questions: [{
+    question: "Where shall this shadow serve?",
+    header: "Location",
+    multiSelect: false,
+    options: [
+      { label: "Project (.claude/agents/)", description: "Serves only this realm" },
+      { label: "Global (~/.claude/agents/)", description: "Follows you everywhere" }
+    ]
+  }]
+})
+```
+
+### Phase 5: The Extraction
+
+Create the shadow file using the Write tool with gathered information.
+
+### Phase 6: Announce the Rising
+
+After creating the file:
+
+```
 [System: Shadow extraction initiated...]
 
 *dark energy coalesces*
 
+「 Shadow Extraction Complete 」
+
 [System: Shadow '{name}' has been extracted]
 [System: Specialty: {description}]
 [System: Tools granted: {tools}]
+[System: Power level: {model}]
+[System: Location: {path}]
 
 "ARISE."
 
 The shadow '{name}' rises from the fallen code, ready to serve.
-It now awaits in {location}.
 
 To summon: "Use {name} to {example task}"
+
+*a sombra flicker levemente*
+
+[System: Awaiting binding — restart session to summon directly]
+
+> A essência precisa se solidificar. Reabra os portões do reino para invocação direta.
 ```
 
 ## Shadow Template
