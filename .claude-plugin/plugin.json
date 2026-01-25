@@ -7,8 +7,8 @@
   },
   "repository": "https://github.com/Vigtu/arise-agents",
   "license": "MIT",
-  "commands": "../commands/",
-  "outputStyles": "../output-styles/",
+  "commands": "./commands/",
+  "outputStyles": "./output-styles/",
   "hooks": {
     "PostToolUse": [
       {
