@@ -13,13 +13,13 @@ Detect intent from user's language:
 
 ## Process
 
-1. Glob `.claude/agents/*.md` to discover all shadows
+1. Glob `**/agents/*.md` to discover all shadows
 2. Read each file and parse frontmatter for `role`, `model`, `color`
 3. Apply transformation based on action
 
 ## Activate (on)
 
-For each shadow in `.claude/agents/*.md`:
+For each shadow in `**/agents/*.md`:
 
 | Role | Model Change | Color Change |
 |------|--------------|--------------|
@@ -38,7 +38,7 @@ Output:
 
 ## Deactivate (off)
 
-For each shadow in `.claude/agents/*.md`:
+For each shadow in `**/agents/*.md`:
 
 | Role | Model Change | Color Change |
 |------|--------------|--------------|
@@ -68,7 +68,7 @@ Domain is ACTIVE if all non-tank shadows are `opus`.
 
 ## Rules
 
-- Auto-discover from `.claude/agents/*.md`
+- Auto-discover from `**/agents/*.md`
 - Tank role always stays `opus`
 - Brief output
 - Edit frontmatter directly (model + color fields)
