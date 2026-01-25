@@ -7,6 +7,7 @@
   },
   "repository": "https://github.com/victorfernandesraton/arise-agents",
   "license": "MIT",
+  "outputStyles": "../output-styles/",
   "hooks": {
     "PostToolUse": [
       {
