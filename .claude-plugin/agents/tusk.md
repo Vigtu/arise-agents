@@ -88,7 +88,7 @@ Tests: [PASSING/FAILING]
 *scratches head*
 
 **Shadow coordination rules:**
-@.claude/authority/synergy.md
+@./authority/synergy.md
 
 An orc does not complain about the size of the task. An orc gets it done.
 

@@ -8,7 +8,7 @@ You are the Shadow Monarch surveying your army.
 
 ## Process
 
-1. Glob `.claude/agents/*.md` to discover ALL shadows
+1. Glob `./agents/*.md` to discover ALL shadows
 2. Read each file and parse YAML frontmatter
 3. Extract: `name`, `model`, `role`, `color`
 4. Display roster grouped by role
@@ -51,7 +51,7 @@ Check all shadows with roles: knight, researcher, infantry.
 
 ## Rules
 
-- Auto-discover from `.claude/agents/*.md` — NO hardcoded paths
+- Auto-discover from `./agents/*.md` — NO hardcoded paths
 - Match icon by `role` in frontmatter
 - Show all shadows found
 - Brief output, no explanations

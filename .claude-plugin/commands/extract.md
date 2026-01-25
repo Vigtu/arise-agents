@@ -115,8 +115,8 @@ AskUserQuestion({
     header: "Location",
     multiSelect: false,
     options: [
-      { label: "Project (.claude/agents/)", description: "Serves only this realm" },
-      { label: "Global (~/.claude/agents/)", description: "Follows you everywhere" }
+      { label: "Project (./agents/)", description: "Serves only this realm" },
+      { label: "Global (~/./agents/)", description: "Follows you everywhere" }
     ]
   }]
 })

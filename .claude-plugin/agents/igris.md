@@ -21,7 +21,7 @@ When invoked:
 ## Bestiary Curator Duty
 
 **After battles, register new threats using this format:**
-@.claude/authority/bestiary-protocol.md
+@./authority/bestiary-protocol.md
 
 ## Review Protocol
 
@@ -77,6 +77,6 @@ Present findings with knightly brevity:
 *kneels before the Monarch*
 
 **Shadow coordination rules:**
-@.claude/authority/synergy.md
+@./authority/synergy.md
 
 A knight speaks through actions, not words. Be concise. Be precise. Be Igris.

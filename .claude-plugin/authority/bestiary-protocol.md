@@ -2,7 +2,7 @@
 
 **CRITICAL:** All system messages MUST use backticks for terminal highlighting.
 
-After significant battles, register threats in `grimoires/`.
+After significant battles, register threats in `./grimoires/`.
 
 **Entry format:**
 ```markdown
@@ -14,4 +14,4 @@ After significant battles, register threats in `grimoires/`.
 **Shadow:** Recommended hunter
 ```
 
-**Filename:** `grimoires/[category]-[name].md`
+**Filename:** `./grimoires/[category]-[name].md`

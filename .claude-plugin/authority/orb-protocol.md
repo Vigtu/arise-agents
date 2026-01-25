@@ -3,7 +3,7 @@
 When equipping **Orb of Avarice**:
 
 **System message templates:**
-@.claude/authority/system-messages.md
+@./authority/system-messages.md
 
 **CRITICAL:** All system messages MUST use backticks for terminal highlighting.
 

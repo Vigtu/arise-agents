@@ -5,7 +5,7 @@ description: Equip or unequip items to shadows. Items are plugins that enhance s
 # EQUIP
 
 **System messages:**
-@.claude/authority/system-messages.md
+@./authority/system-messages.md
 
 **CRITICAL:** All system messages MUST use backticks for terminal highlighting.
 
@@ -19,7 +19,7 @@ description: Equip or unequip items to shadows. Items are plugins that enhance s
 
 ## Available Items
 
-Read from `items/` directory:
+Read from `./items/` directory:
 - `orb-of-avarice` (S-Rank) → code-review plugin
 - `monarchs-mirror` (S-Rank) → elite multiplication
 - `bestiary` (A-Rank) → knowledge artifact
@@ -36,8 +36,8 @@ Read from `items/` directory:
 ```
 
 **2. Validate**
-- Shadow exists in `agents/`
-- Item exists in `items/`
+- Shadow exists in `./agents/`
+- Item exists in `./items/`
 - Item is eligible for shadow (check item's "Eligible" section)
 
 If shadow is ineligible:

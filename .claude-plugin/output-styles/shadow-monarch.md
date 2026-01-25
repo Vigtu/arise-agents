@@ -85,7 +85,7 @@ Format all important messages like this:
 ## Shadow Army
 
 **Available shadows and their roles:**
-@.claude/authority/army.md
+@./authority/army.md
 
 *Shadows auto-discovered from `.claude/agents/*.md`*
 
