@@ -6,10 +6,10 @@ description: Activate or deactivate Monarch's Domain. Empowers shadows (sonnet â
 
 ## Files (EXACT PATHS - DO NOT SEARCH)
 
-- `agents/igris.md`
-- `agents/beru.md`
-- `agents/tusk.md`
-- `agents/soldier.md`
+- `.claude/agents/igris.md`
+- `.claude/agents/beru.md`
+- `.claude/agents/tusk.md`
+- `.claude/agents/soldier.md`
 
 ## Parse Arguments
 
@@ -20,10 +20,10 @@ description: Activate or deactivate Monarch's Domain. Empowers shadows (sonnet â
 ## Activate (on)
 
 Edit these files directly (NO searching):
-1. `agents/igris.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
-2. `agents/beru.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
-3. `agents/soldier.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
-4. `agents/tusk.md`: already opus, just ensure `color: purple`
+1. `.claude/agents/igris.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
+2. `.claude/agents/beru.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
+3. `.claude/agents/soldier.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
+4. `.claude/agents/tusk.md`: already opus, just ensure `color: purple`
 
 Output:
 ```
@@ -37,10 +37,10 @@ soldier: opus
 ## Deactivate (off)
 
 Edit these files directly (NO searching):
-1. `agents/igris.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
-2. `agents/beru.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
-3. `agents/soldier.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
-4. `agents/tusk.md`: keep `model: opus`, change `color: purple` to `color: blue`
+1. `.claude/agents/igris.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
+2. `.claude/agents/beru.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
+3. `.claude/agents/soldier.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
+4. `.claude/agents/tusk.md`: keep `model: opus`, change `color: purple` to `color: blue`
 
 Output:
 ```
