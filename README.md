@@ -1,8 +1,28 @@
 # arise-agents
 
-Shadow army of specialized subagents for Claude Code, inspired by Solo Leveling.
+**Claude Code plugin for multi-agent orchestration inspired by Solo Leveling**
+
+Transform Claude into a Shadow Monarch commanding specialized AI agents for parallel development tasks.
 
 > "ARISE!"
+
+## What is this?
+
+Instead of one monolithic assistant, summon **focused shadow agents** for different coding tasks:
+- **Igris** reviews code quality
+- **Beru** explores complex systems
+- **Tusk** handles heavy refactors
+- **Soldiers** run parallel reconnaissance
+
+Deploy multiple shadows simultaneously, each optimized for their role. Solo Leveling meets agentic workflows.
+
+## Key Features
+
+- **Shadow multiplication**: `3 beru` or `igris x5` for parallel task execution
+- **Monarch's Domain**: Toggle `/domain` to upgrade shadows from Sonnet → Opus
+- **Shadow extraction**: `/extract` creates custom agents from your git history patterns
+- **Natural language**: Just say what you need - the system routes to the right shadow
+- **Thematic output**: Solo Leveling-style notifications `「 System 」`
 
 ## Installation
 
