@@ -13,7 +13,7 @@
 
 An ancient artifact radiating immense magical energy. In Solo Leveling, Sung Jinwoo entrusted this orb to his high orc shaman Tusk, amplifying his magical abilities to devastating levels.
 
-In the Shadow Army, the Orb enhances analytical power — transforming a single shadow's review into a coordinated assault by 4 specialized agents, each scrutinizing code with ruthless precision.
+In the Shadow Army, the Orb amplifies destructive power — transforming Tusk's refactoring strikes into surgical simplification assaults, obliterating code complexity while preserving functionality.
 
 ---
 

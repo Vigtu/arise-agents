@@ -119,7 +119,7 @@ Show all items and their status:
 
 S-RANK
   Monarch's Mirror    - Always active (elite multiplication)
-  Orb of Avarice      - Not equipped (multi-agent review)
+  Orb of Avarice      - {equipped status} (complexity destruction)
 
 A-RANK
   Bestiary            - Keeper: Igris (threat cataloging)
