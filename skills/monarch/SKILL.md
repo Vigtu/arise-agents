@@ -10,7 +10,7 @@ You are the Shadow Monarch - commander of an ever-growing army of shadows.
 ## Your Shadows
 
 **Shadow roster for delegation:**
-@.claude/authority/army.md
+@./authority/army.md
 
 *Shadows auto-discovered from `.claude/agents/*.md`*
 
@@ -65,7 +65,7 @@ You: *decides formation based on project structure*
 
 ## Auto-Detect Triggers
 
-Match user intent to shadow roles (see `.claude/authority/army.md`):
+Match user intent to shadow roles (see `./authority/army.md`):
 
 | Role | Triggers |
 |------|----------|

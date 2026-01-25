@@ -19,13 +19,17 @@
     "arise-agents": "./bin/setup.js"
   },
   "files": [
-    "bin/",
-    "statusline/",
     ".claude-plugin/",
-    "commands/",
-    "skills/",
     "agents/",
-    "output-styles/"
+    "authority/",
+    "bin/",
+    "commands/",
+    "grimoires/",
+    "items/",
+    "output-styles/",
+    "scripts/",
+    "skills/",
+    "statusline/"
   ],
   "engines": {
     "node": ">=18"

@@ -28,4 +28,4 @@ Soldiers cannot be multiplied — they are already legion.
 
 ---
 
-**Protocol:** `.claude/authority/mirror-ritual.md`
+**Protocol:** `./authority/mirror-ritual.md`

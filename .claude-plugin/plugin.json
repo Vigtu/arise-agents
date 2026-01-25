@@ -7,8 +7,30 @@
   },
   "repository": "https://github.com/Vigtu/arise-agents",
   "license": "MIT",
-  "commands": "./commands/",
-  "outputStyles": "./output-styles/",
+  "commands": [
+    "./commands/arise.md",
+    "./commands/domain.md",
+    "./commands/equip.md",
+    "./commands/extract.md",
+    "./commands/shadows.md",
+    "./commands/status.md"
+  ],
+  "agents": [
+    "./agents/igris.md",
+    "./agents/igris.ascended.md",
+    "./agents/beru.md",
+    "./agents/beru.ascended.md",
+    "./agents/tusk.md",
+    "./agents/soldier.md",
+    "./agents/soldier.ascended.md"
+  ],
+  "skills": [
+    "./skills/monarch",
+    "./skills/tasks"
+  ],
+  "outputStyles": [
+    "./output-styles/shadow-monarch.md"
+  ],
   "hooks": {
     "PostToolUse": [
       {

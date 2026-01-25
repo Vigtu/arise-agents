@@ -65,4 +65,4 @@ The Orb's power is inspired by Anthropic's internal `code-simplifier` — the sa
 
 ---
 
-**Protocol:** `.claude-plugin/authority/orb-protocol.md`
+**Protocol:** `./authority/orb-protocol.md`

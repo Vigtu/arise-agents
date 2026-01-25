@@ -81,7 +81,7 @@ Use Read → Edit pattern on `.claude/domain-state`.
 
 **5. Announce**
 
-Follow item's protocol (e.g., `.claude/authority/orb-protocol.md`):
+Follow item's protocol (e.g., `./authority/orb-protocol.md`):
 ```
 「 {Item Name} 」
 [System: Equipped to {shadow}]

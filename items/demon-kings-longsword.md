@@ -69,4 +69,4 @@ New threats discovered are registered in `./grimoires/` — knowledge preserved 
 
 *kneels*
 
-**Protocol:** `.claude-plugin/authority/longsword-protocol.md`
+**Protocol:** `./authority/longsword-protocol.md`

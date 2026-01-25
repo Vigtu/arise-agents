@@ -22,5 +22,5 @@
 ## Structure
 
 - `./items/` — Lore + reference (not auto-loaded)
-- `.claude-plugin/authority/` — Protocols (imported via @)
+- `./authority/` — Protocols (imported via @)
 - `./grimoires/` — Bestiary entries (written by Igris)

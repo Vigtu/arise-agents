@@ -33,4 +33,4 @@ The Bestiary records every threat the Shadow Army encounters. Knowledge earned i
 
 Entries written to: `./grimoires/`
 
-**Protocol:** `.claude/authority/bestiary-protocol.md`
+**Protocol:** `./authority/bestiary-protocol.md`
