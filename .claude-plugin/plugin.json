@@ -6,5 +6,19 @@
     "name": "Victor"
   },
   "repository": "https://github.com/victorfernandesraton/arise-agents",
-  "license": "MIT"
+  "license": "MIT",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/xp-hook.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
 }
