@@ -84,7 +84,8 @@ All important messages use the Solo Leveling system notification style:
 
 ## Shadow Army
 
-@import .claude/authority/army.md
+**Available shadows and their roles:**
+@ .claude/authority/army.md
 
 *Shadows auto-discovered from `.claude/agents/*.md`*
 

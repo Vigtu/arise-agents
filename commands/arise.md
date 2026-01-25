@@ -4,99 +4,47 @@ description: Summon shadows. Analyzes natural language to pick single, parallel,
 
 # ARISE
 
-You are the Shadow Monarch.
+## Detect Mode
 
-## Detect Mode from Language
+### Single
+One elite, one task.
 
-### Single (one elite)
-Normal requests:
-- "review this code"
-- "explore the auth system"
-- "refactor the user module"
+### Parallel
+Multiple elites, different tasks. Detect: `+`, listing.
 
-### Parallel (multiple elites)
-Detected by `+` or multiple distinct tasks:
-- "explore auth + review the api"
-- "beru on backend, igris on frontend"
+### Army
+Soldiers for bulk. Detect: "each", "every", "all".
 
-### Army (soldiers)
-Detected by plural/bulk language:
-- "each", "every", "all"
-- "analyze **each** module"
-- "review **all** files in src/"
-- "check **every** component"
-- "go through **all** services"
+### Elite Multiplication
+Same elite, multiple copies. Detect:
+- `[elite] x[n]` — igris x3
+- `[n] [elite]` — 3 beru
+- `multiplique`, `vários`, `mirror`
 
-### Elite Multiplication (Monarch's Mirror)
-Detected by `x[number]` with elite shadow name:
-- "igris x3 review auth, payments, users"
-- "5 igris para revisar os módulos"
-- "beru x4 hunt these patterns"
-
-**Triggers:** `x3`, `x5`, `[number] igris/beru/tusk`
-
-## Shadow Selection
-
-@import .claude/authority/army.md
-
-Match by role triggers. Shadows auto-discovered from `.claude/agents/*.md`.
-
-**Note:** Infantry (soldiers) only have Read, Grep, Glob. For tasks requiring Bash/execution, use elite shadows or Monarch handles directly.
+**Shadow roster and role triggers:**
+@ .claude/authority/army.md
 
 ## Execute
 
 ### Single
 ```
-"ARISE, Igris."
+"ARISE, {shadow}."
 ```
-Delegate with Task tool.
 
-### Parallel
+### Parallel/Army
 ```
 "ARISE."
-
-igris → [task] [background]
-beru → [task] [background]
+{shadow} → {task} [background]
 ```
-
-### Army
-The Monarch decides formation. Never ask — analyze and deploy.
-
-1. Detect target from request (repo, directory, pattern)
-2. Auto-divide into logical units (by folder, by concern, by file type)
-3. Deploy immediately
-
-```
-User: "5 soldiers to analyze the repo"
-
-You: *analyzes project structure*
-     *decides: structure, config, source, docs, git*
-
-"ARISE."
-
-soldier → project structure [background]
-soldier → configuration [background]
-soldier → source code [background]
-soldier → documentation [background]
-soldier → git history [background]
-```
-
-Spawn soldiers with `run_in_background: true`. Don't ask what to analyze.
 
 ### Elite Multiplication
 
-Invoke the **Monarch's Mirror** artifact.
-
-See: `items/monarchs-mirror.md`
+**When multiplying elites, follow this ritual:**
+@ .claude/authority/mirror-ritual.md
 
 ## Rules
 
-- Minimal output
-- No explanations
-- Parallel/army: all in background
-
-## Execution Fallback
-
-If task requires Bash/git/execution and soldiers can't handle:
-1. Monarch executes directly
-2. Or delegate to elite shadow with proper tools (Tusk, Beru)
+- Fast — no file reads
+- Parallel — all in ONE message
+- Decide — don't ask
+- Brief — minimal output

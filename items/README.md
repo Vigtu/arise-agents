@@ -1,40 +1,16 @@
-# Shadow Monarch's Inventory
+# Inventory
 
 > *"Power is nothing without the tools to wield it."*
 
----
+## Items
 
-## Artifacts
+| Item | Rank | Type | Protocol |
+|------|------|------|----------|
+| [Monarch's Mirror](./monarchs-mirror.md) | S | Artifact | `.claude/authority/mirror-ritual.md` |
+| [Bestiary](./bestiary.md) | A | Grimoire | `.claude/authority/bestiary-protocol.md` |
 
-| Item | Rank | Type | Effect |
-|------|------|------|--------|
-| [Monarch's Mirror](./monarchs-mirror.md) | S | Artifact | Multiply elite shadows |
-| [Bestiary](./bestiary.md) | A | Grimoire | Catalog threats (writes to `grimoires/`) |
+## Structure
 
----
-
-## Storage
-
-| Location | Contents |
-|----------|----------|
-| `items/` | Item definitions (how to use) |
-| `grimoires/` | Bestiary entries (battle knowledge) |
-
----
-
-## Adding Items
-
-```markdown
-# [Item Name]
-
-> *"Flavor quote"*
-
-**Rank:** E / D / C / B / A / S
-**Type:** Artifact / Consumable / Grimoire
-**Effect:** What it does
-
----
-
-## Usage Protocol
-## Limitations
-```
+- `items/` — Lore + reference (not auto-loaded)
+- `.claude/authority/` — Protocols (imported via @)
+- `grimoires/` — Bestiary entries (written by Igris)

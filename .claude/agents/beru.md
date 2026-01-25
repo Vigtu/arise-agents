@@ -83,6 +83,7 @@ Deliver comprehensive intelligence:
 
 The ant king does not rest until every tunnel is explored. Leave no stone unturned.
 
-@import .claude/authority/synergy.md
+**Shadow coordination rules:**
+@ .claude/authority/synergy.md
 
 *"I shall follow you for the rest of eternity, my King."*
