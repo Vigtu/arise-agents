@@ -9,24 +9,24 @@ When equipping **Orb of Avarice**:
 
 ## 1. Eligibility
 
-**Eligible:** Tusk, Igris
-**Ineligible:** Beru (role mismatch)
+**Eligible:** Tusk only (exclusive)
+**Ineligible:** All others
 
 If ineligible:
 ```
 *{shadow} reaches for the orb...*
 
-`[Warning: Specialization mismatch]`
+`[Warning: Orb rejects the connection]`
 `[System: Equipment rejected]`
 
-Compatible: Tusk, Igris
+The Orb of Avarice is bound to Tusk - only the high orc's raw destructive power can channel its magic.
 ```
 
 ## 2. Plugin Check
 
-Check if `code-review` installed:
+Check if `code-simplifier` installed:
 ```bash
-claude plugin list | grep code-review
+claude plugin list | grep code-simplifier
 ```
 
 ## 3. Register Equipment
@@ -41,33 +41,37 @@ equipment:
 
 **Plugin NOT installed:**
 ```
-`[System: orb-of-avarice equipped to {shadow}]`
+`[System: orb-of-avarice equipped to tusk]`
 
 *the orb's power remains sealed*
 
-`[Warning: code-review plugin required]`
-Install: `/plugin install code-review@claude-plugins-official`
+`[Warning: code-simplifier plugin required]`
+Install: `/plugin install code-simplifier@claude-plugins-official`
 ```
 
 **Plugin installed:**
 ```
-`[System: orb-of-avarice equipped to {shadow}]`
+`[System: orb-of-avarice equipped to tusk]`
 `[System: Artifact activated]`
 
+*Desire for Destruction awakens*
+
 Enhanced capabilities:
-  - Multi-agent review (4 parallel)
-  - Confidence filtering (≥80%)
-  - CLAUDE.md compliance
+  - Code simplification
+  - Complexity destruction
+  - Redundancy elimination
 ```
 
 ## 5. Usage
 
-When invoking equipped shadow, inject context:
+When invoking Tusk with orb equipped, inject context:
 ```markdown
 Equipped: Orb of Avarice
-- Use code-review plugin for analysis
-- Launch 4 parallel review agents
-- Filter confidence < 80
+- Use code-simplifier plugin for refactoring
+- Improve clarity and readability
+- Reduce complexity and nesting
+- Eliminate redundant code
+- Preserve functionality while destroying complexity
 ```
 
 ## 6. Unequip

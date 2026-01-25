@@ -4,8 +4,8 @@
 
 **Rank:** S (Legendary)
 **Type:** Amplifier
-**Plugin:** `code-review@claude-plugins-official`
-**Effect:** Doubles analytical depth through multi-agent review
+**Plugin:** `code-simplifier@claude-plugins-official`
+**Effect:** Doubles destructive power - obliterates code complexity
 
 ---
 
@@ -21,42 +21,45 @@ In the Shadow Army, the Orb enhances analytical power — transforming a single 
 
 | Shadow | Specialization | Effect |
 |--------|----------------|--------|
-| **Tusk** | Heavy refactoring | 4-agent code audit for large migrations - validates before destruction |
-| **Igris** | Code review | Enhanced compliance checking - amplifies commander's review power |
+| **Tusk** | Heavy refactoring | Amplifies destructive power - simplifies complex code mercilessly |
+
+**Exclusive to Tusk** - Only the high orc tank can wield this orb's raw destructive magic.
 
 **Ineligible:**
-- ❌ **Beru** - Role mismatch (scout/hunter, not reviewer)
+- ❌ **Igris** - Commander requires precision, not brute simplification
+- ❌ **Beru** - Scout/hunter, wrong specialization
 
 ---
 
 ## Installation
 
 ```bash
-/plugin install code-review@claude-plugins-official
+/plugin install code-simplifier@claude-plugins-official
 ```
 
 **Status:** Not installed yet
-**Prerequisites:** Git repository, GitHub integration
+**Prerequisites:** None
 
 ---
 
 ## Effect Details
 
-When equipped, shadow gains access to:
+When equipped, Tusk gains enhanced destructive capabilities:
 
-- **4 Parallel Agents:**
-  - 2x CLAUDE.md compliance checkers
-  - 1x Bug detector (finds obvious bugs)
-  - 1x Git history analyzer (context from blame)
+- **Code Simplification:**
+  - Improves clarity and readability
+  - Reduces unnecessary complexity and nesting
+  - Removes redundant code while preserving functionality
 
-- **Confidence Scoring:**
-  - Each issue rated 0-100
-  - Only reports issues ≥80 confidence
-  - Reduces false positives
+- **Complexity Destruction:**
+  - Identifies over-engineered patterns
+  - Simplifies control flow
+  - Eliminates code duplication
 
-- **CLAUDE.md Integration:**
-  - Audits changes against repository guidelines
-  - Enforces coding standards automatically
+- **Desire for Destruction:**
+  - Amplifies refactoring power
+  - Makes massive migrations safer
+  - "Measure twice, cut once" - but with magical precision
 
 ---
 
