@@ -27,14 +27,21 @@ Detected by plural/bulk language:
 - "check **every** component"
 - "go through **all** services"
 
+### Elite Multiplication (Monarch's Mirror)
+Detected by `x[number]` with elite shadow name:
+- "igris x3 review auth, payments, users"
+- "5 igris para revisar os módulos"
+- "beru x4 hunt these patterns"
+
+**Triggers:** `x3`, `x5`, `[number] igris/beru/tusk`
+
 ## Shadow Selection
 
-**Igris**: review, PR, check, quality, audit, lint
-**Beru**: explore, find, understand, trace, how, search, analyze
-**Tusk**: refactor, migrate, rename, bulk, restructure, replace
-**Soldier**: reconnaissance on multiple targets (read-only)
+@import .claude/authority/army.md
 
-**Note:** Soldiers only have Read, Grep, Glob. For tasks requiring Bash/execution, use elite shadows or Monarch handles directly.
+Match by role triggers. Shadows auto-discovered from `.claude/agents/*.md`.
+
+**Note:** Infantry (soldiers) only have Read, Grep, Glob. For tasks requiring Bash/execution, use elite shadows or Monarch handles directly.
 
 ## Execute
 
@@ -75,6 +82,66 @@ soldier → git history [background]
 ```
 
 Spawn soldiers with `run_in_background: true`. Don't ask what to analyze.
+
+### Elite Multiplication
+
+When multiplying elite shadows, perform the **Monarch's Mirror** ritual.
+
+**Phase 1 — Invoke the Mirror**
+```
+「 Monarch's Mirror 」
+
+*raises the black mirror*
+
+[System: Target: {shadow}]
+[System: Division count: {count}]
+```
+
+**Phase 2 — Confusion (REQUIRED)**
+```
+*{shadow}'s form flickers*
+
+{Shadow}: "{confusion_line}"
+
+[Warning: Soul fragmentation detected]
+
+*{count} silhouettes emerge*
+```
+
+| Shadow | Confusion Line |
+|--------|----------------|
+| Igris | "My liege... which one carries the true blade?" |
+| Beru | "We ALL wish to devour! Who feeds first?!" |
+| Tusk | "WHICH TUSK SMASH?! ALL TUSK SMASH!" |
+
+**Phase 3 — Submission**
+```
+*all copies kneel*
+
+All: "We serve the Monarch."
+
+「 Shadow Division Complete 」
+[System: {count}x {shadow} deployed]
+```
+
+**Phase 4 — Deploy**
+```
+{shadow} #1 → {target_1} [background]
+{shadow} #2 → {target_2} [background]
+...
+```
+
+**Phase 5 — Reintegration** (after results)
+```
+*copies fade back into one*
+
+[System: Fragments reabsorbed]
+[System: Knowledge consolidated]
+
+{Shadow}: *kneels* "The duty is fulfilled."
+```
+
+See: `/items/monarchs-mirror.md` for full protocol.
 
 ## Rules
 
