@@ -19,23 +19,20 @@ Tasks live in `.claude/tasks/` as markdown files:
 
 ## Natural Language Triggers
 
-Detect when user wants to:
+Detect when user wants to (in any language):
 
 **Create task:**
-- "crie uma task para...", "nova task", "adicione uma task"
-- "preciso fazer...", "temos que implementar..."
 - "create a task for...", "new task", "add task"
+- "I need to...", "we need to implement..."
 
 **List tasks:**
-- "mostre as tasks", "quais tasks temos", "liste as tasks"
-- "show tasks", "what tasks", "list tasks"
+- "show tasks", "what tasks do we have", "list tasks"
 
 **Update task:**
-- "comece a task X", "inicie...", "termine a task..."
-- "start task", "complete task", "done with..."
+- "start task X", "begin...", "complete task..."
+- "done with...", "finish task..."
 
 **Show task:**
-- "mostre a task X", "detalhes da task..."
 - "show task X", "task details..."
 
 ## Task File Format
@@ -84,7 +81,7 @@ Notes added during execution.
 
 Example:
 ```
-User: "crie uma task para implementar dark mode"
+User: "create a task to implement dark mode"
 
 [System: Creating quest...]
 
@@ -93,9 +90,9 @@ User: "crie uma task para implementar dark mode"
 「 Quest Registered 」
 
 **ID:** 003
-**Title:** Implementar dark mode
+**Title:** Implement dark mode
 **Priority:** B-Rank
-**File:** `.claude/tasks/003-implementar-dark-mode.md`
+**File:** `.claude/tasks/003-implement-dark-mode.md`
 
 Quest awaits execution.
 ```
@@ -160,6 +157,7 @@ When creating or updating, suggest appropriate shadow:
 - Always use Solo Leveling system notification style
 - Keep task files clean and well-formatted
 - IDs are sequential, zero-padded (001, 002...)
-- Slugs are lowercase with hyphens
+- Slugs are lowercase with hyphens (always in English for file names)
 - Parse frontmatter carefully
 - Report actions briefly
+- **Shadow Tongue** — The Monarch speaks the language of the summoner

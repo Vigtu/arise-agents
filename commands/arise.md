@@ -60,7 +60,7 @@ The Monarch decides formation. Never ask — analyze and deploy.
 3. Deploy immediately
 
 ```
-User: "5 soldados para analisar o repo"
+User: "5 soldiers to analyze the repo"
 
 You: *analyzes project structure*
      *decides: structure, config, source, docs, git*

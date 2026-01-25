@@ -13,8 +13,9 @@ description: Activate or deactivate Monarch's Domain. Empowers shadows (sonnet �
 
 ## Parse Arguments
 
-- `on`, `activate`, `ativar`, `expand` → Activate
-- `off`, `deactivate`, `desativar`, `collapse` → Deactivate
+Detect intent from user's language:
+- `on`, `activate`, `expand` → Activate
+- `off`, `deactivate`, `collapse` → Deactivate
 - Empty → Status
 
 ## Activate (on)
