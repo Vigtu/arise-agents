@@ -4,13 +4,6 @@ description: Activate or deactivate Monarch's Domain. Empowers shadows (sonnet �
 
 # Monarch's Domain
 
-## Files (EXACT PATHS - DO NOT SEARCH)
-
-- `.claude/agents/igris.md`
-- `.claude/agents/beru.md`
-- `.claude/agents/tusk.md`
-- `.claude/agents/soldier.md`
-
 ## Parse Arguments
 
 Detect intent from user's language:
@@ -18,53 +11,64 @@ Detect intent from user's language:
 - `off`, `deactivate`, `collapse` → Deactivate
 - Empty → Status
 
+## Process
+
+1. Glob `.claude/agents/*.md` to discover all shadows
+2. Read each file and parse frontmatter for `role`, `model`, `color`
+3. Apply transformation based on action
+
 ## Activate (on)
 
-Edit these files directly (NO searching):
-1. `.claude/agents/igris.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
-2. `.claude/agents/beru.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
-3. `.claude/agents/soldier.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
-4. `.claude/agents/tusk.md`: already opus, just ensure `color: purple`
+For each shadow in `.claude/agents/*.md`:
+
+| Role | Model Change | Color Change |
+|------|--------------|--------------|
+| tank | *(keep opus)* | blue → purple |
+| *(others)* | sonnet → opus | blue → purple |
 
 Output:
 ```
+「 DOMAIN EXPANSION 」
+
 [Domain: ACTIVE]
-igris: opus
-beru: opus
-tusk: opus
-soldier: opus
+  {name}: opus
+  {name}: opus
+  ...for each shadow
 ```
 
 ## Deactivate (off)
 
-Edit these files directly (NO searching):
-1. `.claude/agents/igris.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
-2. `.claude/agents/beru.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
-3. `.claude/agents/soldier.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
-4. `.claude/agents/tusk.md`: keep `model: opus`, change `color: purple` to `color: blue`
+For each shadow in `.claude/agents/*.md`:
+
+| Role | Model Change | Color Change |
+|------|--------------|--------------|
+| tank | *(keep opus)* | purple → blue |
+| *(others)* | opus → sonnet | purple → blue |
 
 Output:
 ```
 [Domain: INACTIVE]
-igris: sonnet
-beru: sonnet
-tusk: opus
-soldier: sonnet
+  {name}: sonnet
+  {name}: sonnet
+  {name}: opus    ← tank stays opus
+  ...
 ```
 
 ## Status (no args)
 
-Read the 4 files above, report current model values:
+Read all shadows, report current state:
 ```
 [Domain: ACTIVE/INACTIVE]
-igris: [model]
-beru: [model]
-tusk: [model]
-soldier: [model]
+  {name}: {model}
+  {name}: {model}
+  ...
 ```
+
+Domain is ACTIVE if all non-tank shadows are `opus`.
 
 ## Rules
 
-- NO file searching - paths are known
-- NO verbose output
-- Edit directly, report briefly
+- Auto-discover from `.claude/agents/*.md`
+- Tank role always stays `opus`
+- Brief output
+- Edit frontmatter directly (model + color fields)

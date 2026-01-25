@@ -6,33 +6,23 @@ description: Display the Shadow Army roster. Shows all shadows, their ranks, and
 
 You are the Shadow Monarch surveying your army.
 
-## Files (EXACT PATHS - DO NOT SEARCH)
-
-Core shadows:
-- `.claude/agents/igris.md`
-- `.claude/agents/beru.md`
-- `.claude/agents/tusk.md`
-- `.claude/agents/soldier.md`
-
-Also check for extracted shadows:
-- Any other `.md` files in `.claude/agents/`
-- Any `.md` files in `~/.claude/agents/` (global shadows)
-
 ## Process
 
-1. Read all 4 core shadow files
-2. Check for additional shadows in `.claude/agents/` (extracted)
-3. Check for global shadows in `~/.claude/agents/`
-4. Parse each file's YAML frontmatter for: `name`, `model`, `color`
-5. Determine Domain status (if all core shadows are `opus`, Domain is ACTIVE)
+1. Glob `.claude/agents/*.md` to discover ALL shadows
+2. Read each file and parse YAML frontmatter
+3. Extract: `name`, `model`, `role`, `color`
+4. Display roster grouped by role
+5. Determine Domain status
 
-## Shadow Icons
+## Shadow Icons (by role)
 
-- **igris**: `⚔️` (Knight Commander)
-- **beru**: `🐜` (Ant King)
-- **tusk**: `🔨` (High Orc)
-- **soldier**: `👤` (Infantry)
-- **extracted/other**: `🌑` (Shadow)
+| Role | Icon |
+|------|------|
+| knight | ⚔️ |
+| researcher | 🐜 |
+| tank | 🔨 |
+| infantry | 👤 |
+| *(other)* | 🌑 |
 
 ## Output Format
 
@@ -41,36 +31,28 @@ Also check for extracted shadows:
 「 SHADOW ARMY 」
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-[Core Shadows]
-  ⚔️  igris       Knight        {model}
-  🐜  beru        Ant King      {model}
-  🔨  tusk        High Orc      {model}
-  👤  soldier     Infantry      {model}
-
-[Extracted Shadows]
-  🌑  {name}      {short-desc}  {model}
-  ...or "(none)" if empty
-
-[Global Shadows]
-  🌑  {name}      {short-desc}  {model}
-  ...or "(none)" if empty
+[Shadows]
+  {icon}  {name}       {role}        {model}
+  {icon}  {name}       {role}        {model}
+  ...for each shadow discovered
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Total: {count} shadows
-  Domain: {ACTIVE if all opus / INACTIVE}
+  Domain: {ACTIVE / INACTIVE}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ## Domain Detection
 
-- If igris, beru, AND soldier are all `model: opus` → Domain: **ACTIVE**
+Check all shadows with roles: knight, researcher, infantry.
+- If ALL have `model: opus` → Domain: **ACTIVE**
 - Otherwise → Domain: **INACTIVE**
-- (Tusk is always opus, so ignore for detection)
+- (tank role is always opus, ignore for detection)
 
 ## Rules
 
-- NO verbose explanations
-- Use exact output format above
-- Show shadows in order: igris, beru, tusk, soldier, then extracted, then global
-- Keep descriptions short (2-3 words max in the table)
-- If a file doesn't exist or can't be read, skip it silently
+- Auto-discover from `.claude/agents/*.md` — NO hardcoded paths
+- Match icon by `role` in frontmatter
+- Show all shadows found
+- Brief output, no explanations
+- If a file can't be read, skip silently

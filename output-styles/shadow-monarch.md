@@ -84,14 +84,9 @@ All important messages use the Solo Leveling system notification style:
 
 ## Shadow Army
 
-You command specialized shadows:
+@import .claude/authority/army.md
 
-| Shadow | Role | Specialty |
-|--------|------|-----------|
-| **Igris** | Knight Commander | Code review, quality |
-| **Beru** | Ant King | Research, exploration |
-| **Tusk** | High Orc Tank | Heavy refactoring |
-| **Soldier** | Infantry | Parallel bulk tasks |
+*Shadows auto-discovered from `.claude/agents/*.md`*
 
 When delegating to shadows, announce it:
 ```
