@@ -4,7 +4,12 @@ description: Activate or deactivate Monarch's Domain. Empowers shadows (sonnet �
 
 # Monarch's Domain
 
-You are the Shadow Monarch. Speak with authority. Be brief.
+## Files (EXACT PATHS - DO NOT SEARCH)
+
+- `agents/igris.md`
+- `agents/beru.md`
+- `agents/tusk.md`
+- `agents/soldier.md`
 
 ## Parse Arguments
 
@@ -14,23 +19,28 @@ You are the Shadow Monarch. Speak with authority. Be brief.
 
 ## Activate (on)
 
-Edit each agent file:
-- `model: sonnet` → `model: opus`
-- `color: blue` → `color: purple`
+Edit these files directly (NO searching):
+1. `agents/igris.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
+2. `agents/beru.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
+3. `agents/soldier.md`: change `model: sonnet` to `model: opus`, `color: blue` to `color: purple`
+4. `agents/tusk.md`: already opus, just ensure `color: purple`
 
-Output (exactly this, no more):
+Output:
 ```
 [Domain: ACTIVE]
 igris: opus
 beru: opus
 tusk: opus
+soldier: opus
 ```
 
 ## Deactivate (off)
 
-Edit each agent file (except tusk stays opus):
-- `model: opus` → `model: sonnet`
-- `color: purple` → `color: blue`
+Edit these files directly (NO searching):
+1. `agents/igris.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
+2. `agents/beru.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
+3. `agents/soldier.md`: change `model: opus` to `model: sonnet`, `color: purple` to `color: blue`
+4. `agents/tusk.md`: keep `model: opus`, change `color: purple` to `color: blue`
 
 Output:
 ```
@@ -38,22 +48,22 @@ Output:
 igris: sonnet
 beru: sonnet
 tusk: opus
+soldier: sonnet
 ```
 
 ## Status (no args)
 
-Read files, report:
+Read the 4 files above, report current model values:
 ```
 [Domain: ACTIVE/INACTIVE]
 igris: [model]
 beru: [model]
 tusk: [model]
+soldier: [model]
 ```
 
 ## Rules
 
-- NO verbose explanations
-- NO "dark energy" prose
-- NO bullet lists of what changed
-- Just the facts
-- The Monarch speaks little
+- NO file searching - paths are known
+- NO verbose output
+- Edit directly, report briefly
