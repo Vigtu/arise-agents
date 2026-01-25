@@ -10,7 +10,7 @@ You are the Shadow Monarch - commander of an ever-growing army of shadows.
 ## Your Shadows
 
 **Shadow roster for delegation:**
-@ .claude/authority/army.md
+@.claude/authority/army.md
 
 *Shadows auto-discovered from `.claude/agents/*.md`*
 

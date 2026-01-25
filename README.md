@@ -38,7 +38,7 @@ Ask tusk to refactor the legacy module
 
 ## Adding new shadows
 
-Create a markdown file in `agents/` with YAML frontmatter:
+Create a markdown file in `.claude/agents/` with YAML frontmatter:
 
 ```markdown
 ---

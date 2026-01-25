@@ -28,7 +28,7 @@ Same elite, multiple copies. Detect:
 - refactor/migrate/rename → **Tusk**
 
 **Shadow roster and role triggers:**
-@ .claude/authority/army.md
+@.claude/authority/army.md
 
 ## Execute
 
@@ -46,7 +46,7 @@ Same elite, multiple copies. Detect:
 ### Elite Multiplication
 
 **When multiplying elites, follow this ritual:**
-@ .claude/authority/mirror-ritual.md
+@.claude/authority/mirror-ritual.md
 
 ## Rules
 
