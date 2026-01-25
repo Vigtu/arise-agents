@@ -19,7 +19,13 @@ Soldiers for bulk. Detect: "each", "every", "all".
 Same elite, multiple copies. Detect:
 - `[elite] x[n]` — igris x3
 - `[n] [elite]` — 3 beru
+- `[n] elites` / `[n] elite shadows` / `[n] sombras de elite`
 - `multiplique`, `vários`, `mirror`
+
+**Auto-select elite when not specified:**
+- pesquisa/research/explore/hunt/investigate → **Beru**
+- review/check/audit/quality → **Igris**
+- refactor/migrate/rename → **Tusk**
 
 **Shadow roster and role triggers:**
 @ .claude/authority/army.md
