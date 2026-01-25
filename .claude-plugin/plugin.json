@@ -3,9 +3,9 @@
   "description": "Shadow army of specialized subagents inspired by Solo Leveling. ARISE!",
   "version": "0.1.0",
   "author": {
-    "name": "Victor"
+    "name": "Vigtu"
   },
-  "repository": "https://github.com/victorfernandesraton/arise-agents",
+  "repository": "https://github.com/Vigtu/arise-agents",
   "license": "MIT",
   "outputStyles": "../output-styles/",
   "hooks": {

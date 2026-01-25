@@ -1,3 +1,13 @@
 # Shadow Monarch state files (per-project, generated)
 .claude/shadow-level.json
 .claude/domain-state
+
+# User configuration (should not be in repo)
+.claude/settings.json
+.claude/settings.local.json
+
+# User-generated content
+.claude/tasks/
+
+# Node modules
+node_modules/

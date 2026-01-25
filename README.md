@@ -23,13 +23,30 @@ Deploy multiple shadows simultaneously, each optimized for their role. Solo Leve
 - **Shadow extraction**: `/extract` creates custom agents from your git history patterns
 - **Natural language**: Just say what you need - the system routes to the right shadow
 - **Thematic output**: Solo Leveling-style notifications `「 System 」`
+- **XP System**: Earn XP from commits (+50) and PRs (+200), level up your hunter rank
+
+## XP Statusline (Optional)
+
+Track your progress with a custom statusline showing XP, level, and rank:
+
+```
+「Lv.8」C-Rank ██████░░░░ 900/1,500 XP │ 15 commits │ 2 PRs
+```
+
+**Quick setup:**
+
+```bash
+npx arise-agents
+```
+
+This configures the statusline automatically. Restart Claude Code to see it.
 
 ## Installation
 
 ### Option 1: Clone and load
 
 ```bash
-git clone https://github.com/victorfernandesraton/arise-agents.git
+git clone https://github.com/Vigtu/arise-agents.git
 cd your-project
 claude --plugin-dir /path/to/arise-agents
 ```

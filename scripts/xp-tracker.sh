@@ -13,15 +13,15 @@ ACTION="$1"
 XP_COMMIT=50
 XP_PR=200
 
-# Rank thresholds
+# Rank thresholds (rebalanced for better progression)
 declare -A RANKS=(
-  [500]="D:Dungeon Crawler"
-  [2000]="C:Raid Member"
-  [5000]="B:Guild Elite"
-  [10000]="A:Hunter of Renown"
-  [25000]="S:Strongest Hunter"
-  [50000]="SS:National Level"
-  [100000]="SSS:Shadow Monarch"
+  [200]="D:Dungeon Crawler"
+  [600]="C:Raid Member"
+  [1500]="B:Guild Elite"
+  [3500]="A:Hunter of Renown"
+  [8000]="S:Strongest Hunter"
+  [15000]="SS:National Level"
+  [25000]="SSS:Shadow Monarch"
 )
 
 # Ensure .claude directory exists
@@ -126,17 +126,73 @@ bar+=$(printf '%0.s░' $(seq 1 $empty 2>/dev/null) || echo "")
 echo ""
 echo "[+${xp_gain} XP] ${action_text}"
 
+# Rank-up animation (epic with custom messages per rank)
 if [[ -n "$ranked_up" ]]; then
   echo ""
-  echo "「 RANK UP 」"
-  echo "[${old_rank} → ${new_rank}]"
-  echo "Title: ${new_title}"
+  sleep 0.3
+  echo -e "\x1b[35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m"
+  sleep 0.2
+  echo -e "\x1b[1;33m「 RANK UP 」\x1b[0m"
+  sleep 0.2
+
+  # Custom rank colors
+  case "$old_rank" in
+    E) old_color="\x1b[90m" ;;
+    D) old_color="\x1b[32m" ;;
+    C) old_color="\x1b[36m" ;;
+    B) old_color="\x1b[34m" ;;
+    A) old_color="\x1b[31m" ;;
+    S) old_color="\x1b[33m" ;;
+    SS) old_color="\x1b[93m" ;;
+  esac
+
+  case "$new_rank" in
+    D) new_color="\x1b[32m" ;;
+    C) new_color="\x1b[36m" ;;
+    B) new_color="\x1b[34m" ;;
+    A) new_color="\x1b[31m" ;;
+    S) new_color="\x1b[33m" ;;
+    SS) new_color="\x1b[93m" ;;
+    SSS) new_color="\x1b[38;2;164;128;242m" ;;
+  esac
+
+  echo -e "   ${old_color}[${old_rank}]\x1b[0m ➜ ${new_color}[${new_rank}]\x1b[0m"
+  sleep 0.2
+  echo -e "\x1b[35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m"
+  sleep 0.2
+
+  # Custom messages per rank
+  case "$new_rank" in
+    D) echo -e "  \x1b[1m${new_title}\x1b[0m" ;;
+    C) echo -e "  \x1b[1m${new_title}\x1b[0m - You're getting stronger" ;;
+    B) echo -e "  \x1b[1m${new_title}\x1b[0m - Advanced hunter acquired" ;;
+    A) echo -e "  \x1b[1;31m${new_title}\x1b[0m - Elite status achieved" ;;
+    S) echo -e "  \x1b[1;33m${new_title}\x1b[0m - You've become a legend" ;;
+    SS) echo -e "  \x1b[1;93m${new_title}\x1b[0m - National Level Hunter" ;;
+    SSS)
+      sleep 0.2
+      echo -e "  \x1b[1;38;2;164;128;242m「 SHADOW MONARCH AWAKENED 」\x1b[0m"
+      sleep 0.2
+      echo -e "  \x1b[38;2;164;128;242mYou have transcended all limits\x1b[0m"
+      ;;
+  esac
+
+  sleep 0.2
+  echo -e "\x1b[35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[0m"
+  sleep 0.3
 fi
 
+# Level-up animation (simple flash)
 if [[ -n "$leveled_up" && -z "$ranked_up" ]]; then
-  echo "[Level Up: ${current_level} → ${new_level}]"
+  echo ""
+  sleep 0.3
+  echo -e "\x1b[33m✦ ✦ ✦ LEVEL UP ✦ ✦ ✦\x1b[0m"
+  sleep 0.2
+  echo -e "  \x1b[1mLv.${current_level}\x1b[0m → \x1b[1;32mLv.${new_level}\x1b[0m"
+  sleep 0.3
 fi
 
+echo ""
 echo "[${bar}] ${new_xp}/${next_threshold} XP"
 echo "[Rank ${new_rank} - Lv.${new_level}] ${new_title}"
 echo ""

@@ -1,0 +1,33 @@
+{
+  "name": "arise-agents",
+  "version": "0.1.0",
+  "description": "Claude Code plugin for multi-agent orchestration inspired by Solo Leveling",
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "ai-agents",
+    "solo-leveling",
+    "shadow-monarch"
+  ],
+  "author": "Vigtu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vigtu/arise-agents.git"
+  },
+  "bin": {
+    "arise-agents": "./bin/setup.js"
+  },
+  "files": [
+    "bin/",
+    "statusline/",
+    ".claude-plugin/",
+    "commands/",
+    "skills/",
+    "agents/",
+    "output-styles/"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
