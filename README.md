@@ -31,6 +31,12 @@ cd arise-agents
 claude --plugin-dir .
 ```
 
+### Activate output style
+
+```
+/output-style arise-agents:shadow-monarch
+```
+
 ## Shadows
 
 | Shadow | Role | Specialty |
