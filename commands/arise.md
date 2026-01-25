@@ -4,6 +4,17 @@ description: Summon shadows. Analyzes natural language to pick single, parallel,
 
 # ARISE
 
+## Domain Check
+
+Before summoning, read `.claude/domain-state`:
+- `on` → use `-ascended` variants
+- `off` or missing → use normal variants
+
+| Domain | Igris | Beru | Soldier | Tusk |
+|--------|-------|------|---------|------|
+| OFF | igris | beru | soldier | tusk |
+| ON | igris-ascended | beru-ascended | soldier-ascended | tusk |
+
 ## Detect Mode
 
 ### Single

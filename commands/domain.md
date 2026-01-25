@@ -11,64 +11,63 @@ Detect intent from user's language:
 - `off`, `deactivate`, `collapse` → Deactivate
 - Empty → Status
 
-## Process
+## State File
 
-1. Glob `**/agents/*.md` to discover all shadows
-2. Read each file and parse frontmatter for `role`, `model`, `color`
-3. Apply transformation based on action
+Domain state persists in `.claude/domain-state`:
+- Contains `on` or `off`
+- Read by ARISE to select shadow variants
 
 ## Activate (on)
 
-For each shadow in `**/agents/*.md`:
-
-| Role | Model Change | Color Change |
-|------|--------------|--------------|
-| tank | *(keep opus)* | blue → purple |
-| *(others)* | sonnet → opus | blue → purple |
-
-Output:
+1. Write `on` to `.claude/domain-state`
+2. Output:
 ```
 「 DOMAIN EXPANSION 」
 
+*dark aura erupts*
+
 [Domain: ACTIVE]
-  {name}: opus
-  {name}: opus
-  ...for each shadow
+  igris     → igris-ascended (opus)
+  beru      → beru-ascended (opus)
+  soldier   → soldier-ascended (opus)
+  tusk      → tusk (opus) ← always ascended
+
+All shadows empowered.
 ```
 
 ## Deactivate (off)
 
-For each shadow in `**/agents/*.md`:
-
-| Role | Model Change | Color Change |
-|------|--------------|--------------|
-| tank | *(keep opus)* | purple → blue |
-| *(others)* | opus → sonnet | purple → blue |
-
-Output:
+1. Write `off` to `.claude/domain-state`
+2. Output:
 ```
 [Domain: INACTIVE]
-  {name}: sonnet
-  {name}: sonnet
-  {name}: opus    ← tank stays opus
-  ...
+  igris     → igris (sonnet)
+  beru      → beru (sonnet)
+  soldier   → soldier (sonnet)
+  tusk      → tusk (opus) ← always ascended
+
+Shadows return to normal state.
 ```
 
 ## Status (no args)
 
-Read all shadows, report current state:
+1. Read `.claude/domain-state` (default: `off` if missing)
+2. Output:
 ```
 [Domain: ACTIVE/INACTIVE]
-  {name}: {model}
-  {name}: {model}
-  ...
+  Shadows will use: {normal/ascended} variants
 ```
 
-Domain is ACTIVE if all non-tank shadows are `opus`.
+## How It Works
+
+| Domain | Shadow Selected |
+|--------|-----------------|
+| `off` | `igris`, `beru`, `soldier` |
+| `on` | `igris-ascended`, `beru-ascended`, `soldier-ascended` |
+
+Tusk is always `opus` — the tank knows no limits.
 
 ## Rules
 
-- Auto-discover from `**/agents/*.md`
-- Tank role always stays `opus`
 - Brief output
-- Edit frontmatter directly (model + color fields)
+- Persist state to `.claude/domain-state`
