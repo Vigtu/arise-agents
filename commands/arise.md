@@ -32,7 +32,9 @@ Detected by plural/bulk language:
 **Igris**: review, PR, check, quality, audit, lint
 **Beru**: explore, find, understand, trace, how, search, analyze
 **Tusk**: refactor, migrate, rename, bulk, restructure, replace
-**Soldier**: bulk/parallel tasks on multiple targets
+**Soldier**: reconnaissance on multiple targets (read-only)
+
+**Note:** Soldiers only have Read, Grep, Glob. For tasks requiring Bash/execution, use elite shadows or Monarch handles directly.
 
 ## Execute
 
@@ -66,3 +68,9 @@ Spawn one soldier per target with `run_in_background: true`.
 - Minimal output
 - No explanations
 - Parallel/army: all in background
+
+## Execution Fallback
+
+If task requires Bash/git/execution and soldiers can't handle:
+1. Monarch executes directly
+2. Or delegate to elite shadow with proper tools (Tusk, Beru)
