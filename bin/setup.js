@@ -198,8 +198,12 @@ async function main() {
     padding: 0,
   };
 
+  // Auto-enable Shadow Monarch output style
+  existingSettings.outputStyle = 'arise-agents:shadow-monarch';
+
   fs.writeFileSync(settingsFile, JSON.stringify(existingSettings, null, 2));
   print(c('green', `✓ Updated ${settingsFile}`));
+  print(c('green', `✓ Enabled Shadow Monarch output style`));
 
   print('');
   print(c('purple', '═══════════════════════════════════════════'));

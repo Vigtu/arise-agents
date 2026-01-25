@@ -33,13 +33,17 @@ Track your progress with a custom statusline showing XP, level, and rank:
 「Lv.8」C-Rank ██████░░░░ 900/1,500 XP │ 15 commits │ 2 PRs
 ```
 
-**Quick setup:**
+**Quick setup (recommended):**
 
 ```bash
 npx arise-agents
 ```
 
-This configures the statusline automatically. Restart Claude Code to see it.
+This automatically configures:
+- ✓ Shadow Monarch statusline (XP, level, rank)
+- ✓ Shadow Monarch output style (themed notifications)
+
+Restart Claude Code to see the changes.
 
 ## Installation
 
@@ -68,7 +72,11 @@ cd arise-agents
 claude --plugin-dir .
 ```
 
-### Activate output style
+### Output style
+
+The Shadow Monarch theme is **automatically enabled** when you run `npx arise-agents`.
+
+If you didn't run the setup, activate it manually:
 
 ```
 /output-style arise-agents:shadow-monarch
