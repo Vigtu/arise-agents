@@ -53,15 +53,28 @@ beru → [task] [background]
 ```
 
 ### Army
-First, detect/glob targets from the request.
+The Monarch decides formation. Never ask — analyze and deploy.
+
+1. Detect target from request (repo, directory, pattern)
+2. Auto-divide into logical units (by folder, by concern, by file type)
+3. Deploy immediately
+
 ```
+User: "5 soldados para analisar o repo"
+
+You: *analyzes project structure*
+     *decides: structure, config, source, docs, git*
+
 "ARISE."
 
-soldier → src/auth [background]
-soldier → src/payment [background]
-soldier → src/users [background]
+soldier → project structure [background]
+soldier → configuration [background]
+soldier → source code [background]
+soldier → documentation [background]
+soldier → git history [background]
 ```
-Spawn one soldier per target with `run_in_background: true`.
+
+Spawn soldiers with `run_in_background: true`. Don't ask what to analyze.
 
 ## Rules
 
