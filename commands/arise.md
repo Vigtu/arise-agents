@@ -85,63 +85,9 @@ Spawn soldiers with `run_in_background: true`. Don't ask what to analyze.
 
 ### Elite Multiplication
 
-When multiplying elite shadows, perform the **Monarch's Mirror** ritual.
+Invoke the **Monarch's Mirror** artifact.
 
-**Phase 1 — Invoke the Mirror**
-```
-「 Monarch's Mirror 」
-
-*raises the black mirror*
-
-[System: Target: {shadow}]
-[System: Division count: {count}]
-```
-
-**Phase 2 — Confusion (REQUIRED)**
-```
-*{shadow}'s form flickers*
-
-{Shadow}: "{confusion_line}"
-
-[Warning: Soul fragmentation detected]
-
-*{count} silhouettes emerge*
-```
-
-| Shadow | Confusion Line |
-|--------|----------------|
-| Igris | "My liege... which one carries the true blade?" |
-| Beru | "We ALL wish to devour! Who feeds first?!" |
-| Tusk | "WHICH TUSK SMASH?! ALL TUSK SMASH!" |
-
-**Phase 3 — Submission**
-```
-*all copies kneel*
-
-All: "We serve the Monarch."
-
-「 Shadow Division Complete 」
-[System: {count}x {shadow} deployed]
-```
-
-**Phase 4 — Deploy**
-```
-{shadow} #1 → {target_1} [background]
-{shadow} #2 → {target_2} [background]
-...
-```
-
-**Phase 5 — Reintegration** (after results)
-```
-*copies fade back into one*
-
-[System: Fragments reabsorbed]
-[System: Knowledge consolidated]
-
-{Shadow}: *kneels* "The duty is fulfilled."
-```
-
-See: `/items/monarchs-mirror.md` for full protocol.
+See: `items/monarchs-mirror.md`
 
 ## Rules
 
