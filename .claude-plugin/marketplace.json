@@ -1,0 +1,27 @@
+{
+  "name": "arise-agents-marketplace",
+  "owner": {
+    "name": "Victor Corrêa Gomes",
+    "repository": "https://github.com/Vigtu/arise-agents"
+  },
+  "plugins": [
+    {
+      "name": "arise-agents",
+      "source": "./",
+      "description": "Shadow army of specialized subagents inspired by Solo Leveling. Summon elite shadows (Igris, Beru, Tusk) and infantry soldiers for code review, exploration, refactoring, and parallel analysis. ARISE!",
+      "version": "0.1.0",
+      "author": {
+        "name": "Vigtu"
+      },
+      "keywords": [
+        "agents",
+        "subagents",
+        "solo-leveling",
+        "shadows",
+        "code-review",
+        "refactoring",
+        "parallel"
+      ]
+    }
+  ]
+}
