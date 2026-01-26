@@ -8,9 +8,18 @@ description: Summon shadows. Analyzes natural language to pick single, parallel,
 
 ## Domain Check
 
-Before summoning, read `.claude/domain-state`:
-- `on` → use `-ascended` variants
-- `off` or missing → use normal variants
+Check `.claude/domain-state` (if exists):
+- `domain: on` → use `-ascended` variants
+- `domain: off` or **file not found** → use normal variants (no error)
+
+**First run?** Create the file:
+```yaml
+domain: off
+equipment:
+  igris: null
+  beru: null
+  tusk: null
+```
 
 | Domain | Igris | Beru | Soldier | Tusk |
 |--------|-------|------|---------|------|
