@@ -126,6 +126,14 @@ AskUserQuestion({
 
 Create the shadow file using the Write tool with gathered information.
 
+### Phase 5.5: Update the Army
+
+After creating the shadow file, update the army registry:
+
+```bash
+${CLAUDE_PLUGIN_ROOT}/scripts/army-update.sh --direct
+```
+
 ### Phase 6: Announce the Rising
 
 After creating the file:

@@ -2,18 +2,21 @@
 
 *The army grows. New shadows rise.*
 
-## Auto-Discovery
+## Shadows
 
-Shadows are auto-discovered from `.claude/agents/*.md`
+| Name | Role | Model |
+|------|------|-------|
+| igris | knight | sonnet → opus |
+| beru | researcher | sonnet → opus |
+| tusk | tank | opus |
+| soldier | infantry | haiku → sonnet |
 
-Each shadow file defines in frontmatter:
-```yaml
-name: shadow-name
-description: when to use this shadow
-tools: Read, Grep, Glob, ...
-model: sonnet | opus
-role: knight | researcher | tank | infantry
-```
+## Profiles
+
+@agents/igris.md
+@agents/beru.md
+@agents/tusk.md
+@agents/soldier.md
 
 ## Roles
 
@@ -29,63 +32,18 @@ role: knight | researcher | tank | infantry
 When user requests action, match against role triggers:
 
 ```
-User: "review this code"
-       ↓ matches "review"
-       ↓ role: knight
-       ↓ find shadow with role: knight
-       → Igris
-```
-
-```
-User: "explore how auth works"
-       ↓ matches "explore", "how"
-       ↓ role: researcher
-       → Beru
-```
-
-```
-User: "refactor the user module"
-       ↓ matches "refactor"
-       ↓ role: tank
-       → Tusk
-```
-
-```
-User: "check each file in src/"
-       ↓ matches "each"
-       ↓ role: infantry
-       → Soldiers (parallel)
+"review this code"  → knight  → Igris
+"explore how auth"  → researcher → Beru
+"refactor module"   → tank → Tusk
+"check each file"   → infantry → Soldiers
 ```
 
 ## Adding New Shadows
 
-1. Create `.claude/agents/{name}.md`
-2. Define frontmatter with `role`
+1. Create `agents/{name}.md` with frontmatter
+2. Run `/shadows` to trigger update (or edit table manually)
 3. Shadow auto-joins the army
-4. Role determines when it's summoned
-
-**Example new shadow:**
-```yaml
----
-name: test-knight
-description: Runs tests, validates coverage, ensures quality
-tools: Read, Bash, Grep
-model: sonnet
-role: knight
----
-```
-
-## Core Shadows
-
-The founding shadows (discovered from `.claude/agents/`):
-
-- **Knights** — Elite review/quality (Igris)
-- **Researchers** — Deep exploration (Beru)
-- **Tanks** — Heavy refactoring (Tusk)
-- **Infantry** — Parallel swarm (Soldier)
-
-*New shadows inherit their role's purpose.*
 
 ---
 
-*The army has no fixed roster. It grows with every extraction.*
+*The army has no fixed limit. It grows with every extraction.*
