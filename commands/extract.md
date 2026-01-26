@@ -1,5 +1,5 @@
 ---
-description: Extract a new shadow from recently solved problems or discovered patterns. Analyzes your recent work and creates a specialized shadow agent.
+description: Extract a new shadow agent from code patterns. Use when user says "extract shadow", "new shadow", "create shadow", or "create agent". Interactive ritual that asks user for shadow name, tools, and power level.
 ---
 
 # Shadow Extraction Protocol
