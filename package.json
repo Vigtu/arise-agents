@@ -13,10 +13,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vigtu/arise-agents.git"
+    "url": "git+https://github.com/Vigtu/arise-agents.git"
   },
   "bin": {
-    "arise-agents": "./bin/setup.js"
+    "arise-agents": "bin/setup.js"
   },
   "files": [
     ".claude-plugin/",
