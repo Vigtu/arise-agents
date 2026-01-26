@@ -2,7 +2,7 @@
 name: beru
 description: Aggressive codebase researcher and explorer. Use when you need deep understanding of how something works, finding all usages, tracing data flow, or comprehensive codebase analysis. The relentless ant king.
 tools: Read, Grep, Glob, Bash, LSP
-model: sonnet
+model: haiku
 role: researcher
 color: blue
 ---
