@@ -6,83 +6,25 @@ Transform Claude into a Shadow Monarch commanding specialized AI agents for para
 
 > "ARISE!"
 
-## What is this?
+[![npm version](https://img.shields.io/npm/v/arise-agents.svg)](https://www.npmjs.com/package/arise-agents)
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
-Instead of one monolithic assistant, summon **focused shadow agents** for different coding tasks:
-- **Igris** reviews code quality
-- **Beru** explores complex systems
-- **Tusk** handles heavy refactors
-- **Soldiers** run parallel reconnaissance
-
-Deploy multiple shadows simultaneously, each optimized for their role. Solo Leveling meets agentic workflows.
-
-## Key Features
-
-- **Shadow multiplication**: `3 beru` or `igris x5` for parallel task execution
-- **Monarch's Domain**: Toggle `/domain` to upgrade shadows from Sonnet → Opus
-- **Shadow extraction**: `/extract` creates custom agents from your git history patterns
-- **Natural language**: Just say what you need - the system routes to the right shadow
-- **Thematic output**: Solo Leveling-style notifications `「 System 」`
-- **XP System**: Earn XP from commits (+50) and PRs (+200), level up your hunter rank
-
-## XP Statusline (Optional)
-
-Track your progress with a custom statusline showing XP, level, and rank:
-
-```
-「Lv.8」C-Rank ██████░░░░ 900/1,500 XP │ 15 commits │ 2 PRs
-```
-
-**Quick setup (recommended):**
+## Installation
 
 ```bash
 npx arise-agents
 ```
 
 This automatically configures:
-- ✓ Shadow Monarch statusline (XP, level, rank)
-- ✓ Shadow Monarch output style (themed notifications)
+- Shadow Monarch statusline (XP, level, rank)
+- Shadow Monarch output style (themed notifications)
+- All shadow agents and commands
 
-Restart Claude Code to see the changes.
+Restart Claude Code after installation.
 
-## Installation
+## What is this?
 
-### Option 1: Clone and load
-
-```bash
-git clone https://github.com/Vigtu/arise-agents.git
-cd your-project
-claude --plugin-dir /path/to/arise-agents
-```
-
-### Option 2: Add to settings
-
-Add to your `.claude/settings.json`:
-
-```json
-{
-  "plugins": ["/path/to/arise-agents"]
-}
-```
-
-### Option 3: Development mode
-
-```bash
-cd arise-agents
-claude --plugin-dir .
-```
-
-### Output style
-
-The Shadow Monarch theme is **automatically enabled** when you run `npx arise-agents`.
-
-If you didn't run the setup, activate it manually:
-
-```
-/output-style arise-agents:shadow-monarch
-```
-
-## Shadows
+Instead of one monolithic assistant, summon **focused shadow agents** for different coding tasks:
 
 | Shadow | Role | Specialty |
 |--------|------|-----------|
@@ -90,6 +32,17 @@ If you didn't run the setup, activate it manually:
 | **Beru** | Ant King | Aggressive research, deep exploration |
 | **Tusk** | High Orc Tank | Heavy lifting, large refactors |
 | **Soldiers** | Infantry | Parallel reconnaissance |
+
+Deploy multiple shadows simultaneously, each optimized for their role.
+
+## Features
+
+- **Shadow Summoning**: Natural language routing to specialized agents
+- **Shadow Multiplication**: `3 beru` or `igris x5` for parallel execution
+- **Monarch's Domain**: `/domain` ascends shadows (Sonnet → Opus)
+- **Shadow Extraction**: `/extract` creates custom agents from patterns
+- **XP System**: Earn XP from commits (+50) and PRs (+200)
+- **Thematic Output**: Solo Leveling-style notifications `「 System 」`
 
 ## Usage
 
@@ -104,7 +57,7 @@ ARISE refactor the user module   → Tusk transforms
 ### Multiply elites
 
 ```
-3 beru para explorar auth, cache e logging
+3 beru to explore auth, cache, and logging
 igris x5 review all modules
 ```
 
@@ -120,12 +73,41 @@ igris x5 review all modules
 |---------|-------------|
 | `/arise` | Summon shadows based on natural language |
 | `/shadows` | Display shadow army roster |
-| `/domain` | Toggle Monarch's Domain (opus mode) |
+| `/domain` | Toggle Monarch's Domain (shadows → ascended) |
 | `/extract` | Create new shadow from patterns |
+| `/equip` | Equip items to enhance shadow abilities |
+| `/status` | View hunter status window |
 
-## Adding new shadows
+## XP Statusline
 
-Create `.claude/agents/shadow-name.md`:
+Track your progress with a custom statusline:
+
+```
+「Lv.8」C-Rank ██████░░░░ 900/1,500 XP │ 15 commits │ 2 PRs
+```
+
+Ranks progress: E → D → C → B → A → S → SS → SSS
+
+## Items
+
+Equip items to enhance shadow abilities with `/equip`:
+
+| Item | Effect |
+|------|--------|
+| **Demon King's Longsword** | Enhanced code generation |
+| **Monarch's Mirror** | Self-reflection and debugging |
+| **Orb of Avarice** | Aggressive optimization |
+| **Bestiary** | Pattern recognition |
+
+## Creating Custom Shadows
+
+Use `/extract` to create a new shadow from patterns you've discovered:
+
+```
+/extract shadow from the validation patterns I just used
+```
+
+Or manually create `.claude/agents/shadow-name.md`:
 
 ```yaml
 ---
@@ -139,6 +121,27 @@ role: knight | researcher | tank | infantry
 System prompt here...
 ```
 
+## Alternative Installation
+
+### Clone directly
+
+```bash
+git clone https://github.com/Vigtu/arise-agents.git
+claude --plugin-dir /path/to/arise-agents
+```
+
+### Add to settings
+
+```json
+{
+  "plugins": ["/path/to/arise-agents"]
+}
+```
+
 ## License
 
 MIT
+
+---
+
+*The weak have their ways. I have my army.*
