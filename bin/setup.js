@@ -205,14 +205,76 @@ async function main() {
   print(c('green', `✓ Updated ${settingsFile}`));
   print(c('green', `✓ Enabled Shadow Monarch output style`));
 
+  // ═══════════════════════════════════════════
+  // ALWAYS install spinner verbs to LOCAL project settings
+  // (This ensures they only appear in projects using the plugin)
+  // ═══════════════════════════════════════════
+
+  const projectSettingsDir = path.join(process.cwd(), '.claude');
+  const projectSettingsFile = path.join(projectSettingsDir, 'settings.json');
+
+  // Create project .claude directory if needed
+  if (!fs.existsSync(projectSettingsDir)) {
+    fs.mkdirSync(projectSettingsDir, { recursive: true });
+  }
+
+  // Read existing project settings
+  let projectSettings = {};
+  if (fs.existsSync(projectSettingsFile)) {
+    try {
+      projectSettings = JSON.parse(fs.readFileSync(projectSettingsFile, 'utf8'));
+    } catch (e) {
+      // Invalid JSON, start fresh
+    }
+  }
+
+  // Add spinner verbs (project-specific)
+  projectSettings.spinnerVerbs = {
+    mode: 'replace',
+    verbs: [
+      'Channeling dark energy',
+      'Consulting the shadows',
+      'The Monarch deliberates',
+      'Sensing mana flow',
+      'Shadows gathering',
+      'Extracting essence',
+      'Surveying the dungeon',
+      'The army stirs',
+      'Communing with Igris',
+      'Beru hunts for answers',
+      'Tusk sharpens his blade',
+      'Soldiers scouting ahead',
+      'Reading the Bestiary',
+      'Shadow exchange in progress',
+      'Opening a gate',
+      'Domain expanding',
+      'Analyzing threat level',
+      'The knight kneels in thought',
+      'Consuming knowledge',
+      'Forging the verdict',
+    ],
+  };
+
+  fs.writeFileSync(projectSettingsFile, JSON.stringify(projectSettings, null, 2));
+  print(c('green', `✓ Installed Shadow Monarch spinner verbs (project-local)`));
+
   print('');
   print(c('purple', '═══════════════════════════════════════════'));
   print(c('bold', '「 SETUP COMPLETE 」'));
   print('');
   print(c('cyan', 'Restart Claude Code to see your statusline.'));
   print('');
+  print(c('dim', 'Statusline location:'));
+  print(c('dim', `  ${isGlobal ? 'Global' : 'Local'} — ${settingsFile}`));
+  print('');
+  print(c('dim', 'Spinner verbs location:'));
+  print(c('dim', `  Project-local — ${projectSettingsFile}`));
+  print('');
   print(c('dim', 'Your statusline will show:'));
   print(c('dim', '  「Lv.1」E-Rank ░░░░░░░░░░ 0/200 XP │ 0 commits │ 0 PRs'));
+  print('');
+  print(c('dim', 'While thinking (in this project), you\'ll see:'));
+  print(c('dim', '  Consulting the shadows... | Beru hunts for answers...'));
   print('');
   print(c('dim', 'Earn XP by making commits (+50) and PRs (+200)!'));
   print(c('purple', '═══════════════════════════════════════════'));
