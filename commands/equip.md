@@ -41,13 +41,17 @@ Read from `./items/` directory:
 - Item is eligible for shadow (check item's "Eligible" section)
 
 If shadow is ineligible:
-```
+
 *{shadow} reaches for {item}...*
 
-`[Warning: Specialization mismatch]`
-`[System: Equipment rejected]`
-
-See items/{item}.md for compatible shadows.
+```diff
+- ═══════════════════════════════════
+- 「 EQUIPMENT REJECTED 」
+- ═══════════════════════════════════
+- Shadow: {shadow}
+- Item: {item}
+- Cause: Specialization mismatch
+- See items/{item}.md for compatible shadows.
 ```
 
 **3. Check Plugin**
@@ -58,13 +62,11 @@ If item has `plugin` field:
 ```
 
 If not installed:
-```
-⚠️  {item} requires plugin: {plugin-name}
 
-Install with:
-  /plugin install {plugin-spec}
-
-Equip canceled.
+```diff
+- 「 EQUIP CANCELED 」
+- {item} requires plugin: {plugin-name}
+- Install: /plugin install {plugin-spec}
 ```
 
 **4. Register Equipment**

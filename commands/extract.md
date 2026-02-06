@@ -190,14 +190,16 @@ model: {sonnet or opus}
 
 If recent work doesn't reveal a clear extractable pattern:
 
+```diff
+- ═══════════════════════════════════
+- 「 EXTRACTION FAILED 」
+- ═══════════════════════════════════
+- Cause: Insufficient essence detected
+- "This fallen code holds no power worth preserving... yet."
 ```
-`[System: Insufficient essence detected]`
-
-"This fallen code holds no power worth preserving... yet."
 
 Provide more context:
-/arise-agents:extract validation patterns from the auth module
-/arise-agents:extract the debugging approach I just used
-```
+`/arise-agents:extract validation patterns from the auth module`
+`/arise-agents:extract the debugging approach I just used`
 
 Now perform the extraction ritual.

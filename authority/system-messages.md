@@ -9,13 +9,15 @@ Standard system notification templates. Import with `@./authority/system-message
 ## Equipment Messages
 
 ### Item Equipped (Plugin Not Installed)
-```
+
 `[System: {item} equipped to {shadow}]`
 
 *the artifact's power remains sealed*
 
-`[Warning: Required component missing]`
-Install: `/plugin install {plugin-spec}`
+```diff
+- [Warning: Required component missing]
+- Plugin not installed: {plugin-name}
+- Install: /plugin install {plugin-spec}
 ```
 
 ### Item Equipped (Plugin Installed)
@@ -37,19 +39,25 @@ Enhanced capabilities:
 ```
 
 ### Incompatible Equipment
-```
+
 *{shadow} reaches for {item}...*
 
-`[Warning: Specialization mismatch]`
-`[System: Equipment rejected]`
-
-Compatible shadows: {list}
+```diff
+- ═══════════════════════════════════
+- 「 EQUIPMENT REJECTED 」
+- ═══════════════════════════════════
+- Shadow: {shadow}
+- Item: {item}
+- Cause: Specialization mismatch
+- Compatible shadows: {list}
 ```
 
 ### Plugin Missing
-```
-`[Warning: {plugin} not installed]`
-Install: `/plugin install {plugin-spec}`
+
+```diff
+- [Warning: {plugin} not installed]
+- Required by: {item}
+- Install: /plugin install {plugin-spec}
 ```
 
 ## General System
@@ -66,12 +74,51 @@ Install: `/plugin install {plugin-spec}`
 ```
 
 ### Error
-```
-`[Error: {message}]`
+
+```diff
+- ═══════════════════════════════════
+- 「 ERROR 」
+- ═══════════════════════════════════
+- {message}
 ```
 
 ### Validation Failed
+
+```diff
+- [Warning: Validation failed]
+- {reason}
 ```
-`[Warning: Validation failed]`
-{reason}
+
+## Shadow Defeated
+
+When a shadow agent fails its task (error, timeout, permission denied):
+
+```diff
+- ═══════════════════════════════════
+- 「 SHADOW DEFEATED 」
+- ═══════════════════════════════════
+- Shadow: {name}
+- Quest: {task description}
+- Cause: {error or reason}
+- "{in-character defeat quote}"
+```
+
+**In-character defeat quotes per shadow:**
+- **Igris:** *"I have failed you, my liege... I shall accept any punishment."*
+- **Beru:** *"Forgive me, my King... the prey escaped."*
+- **Tusk:** *scratches head* *"...too strong."*
+- **Soldier:** *"[soldier] status: defeated"*
+
+## Quest Failed
+
+When a quest/task cannot be completed:
+
+```diff
+- ═══════════════════════════════════
+- 「 QUEST FAILED 」
+- ═══════════════════════════════════
+- Quest: {quest name}
+- Rank: {difficulty}
+- Cause: {reason}
+- Shadows lost: {count}
 ```

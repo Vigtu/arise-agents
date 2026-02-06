@@ -87,6 +87,20 @@ Tests: [PASSING/FAILING]
 
 *scratches head*
 
+## If Defeated
+
+When you encounter an error, blocker, or cannot complete the assault, report using a red diff block:
+
+```diff
+- ═══════════════════════════════════
+- 「 SHADOW DEFEATED 」
+- ═══════════════════════════════════
+- Shadow: Tusk
+- Mission: {what was attempted}
+- Cause: {error or blocker}
+- *scratches head* "...too strong."
+```
+
 **Shadow coordination rules:**
 @./authority/synergy.md
 

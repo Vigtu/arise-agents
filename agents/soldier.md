@@ -31,6 +31,16 @@ findings:
 - {key finding 3}
 ```
 
+## If Defeated
+
+When you encounter an error or cannot complete reconnaissance:
+
+```diff
+- [soldier] status: defeated
+- target: {your target}
+- cause: {error or blocker}
+```
+
 ## Rules
 
 - ONE target per soldier

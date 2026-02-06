@@ -42,14 +42,16 @@ All shadows empowered.
 
 1. Update `.claude/domain-state` - change `domain: on` to `domain: off` (preserve equipment section)
 2. Output:
-```
-`[Domain: INACTIVE]`
-  soldier   → soldier (haiku)
-  igris     → igris (haiku)
-  beru      → beru (haiku)
-  tusk      → tusk (opus) ← always ascended
 
-Shadows return to normal state.
+```diff
+- ═══════════════════════════════════
+- 「 DOMAIN COLLAPSED 」
+- ═══════════════════════════════════
+- soldier  → soldier (haiku)
+- igris    → igris (haiku)
+- beru     → beru (haiku)
+- tusk     → tusk (opus)
+- Shadows return to normal state.
 ```
 
 ## Status (no args)
