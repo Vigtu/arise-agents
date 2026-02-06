@@ -3,7 +3,6 @@
 *The army grows. New shadows rise.*
 
 ## Shadows
-
 | Name | Role | Model |
 |------|------|-------|
 | igris | knight | sonnet → opus |

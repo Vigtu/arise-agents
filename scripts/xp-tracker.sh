@@ -1,7 +1,7 @@
 #!/bin/bash
 # Shadow Monarch XP Tracker
 # Usage: xp-tracker.sh <action>
-# Actions: commit, pr, test_pass, test_fail, push, push_fail, branch, build_pass, build_fail
+# Actions: commit, pr, test_pass, test_fail, push, push_fail, branch, build_pass, build_fail, extraction, bestiary
 
 set -e
 
@@ -16,6 +16,8 @@ XP_TEST=30
 XP_PUSH=30
 XP_BRANCH=10
 XP_BUILD=20
+XP_EXTRACTION=40
+XP_BESTIARY=20
 
 # ANSI colors
 RED="\x1b[31m"
@@ -140,6 +142,16 @@ case "$ACTION" in
     xp_gain=$XP_BUILD
     action_text="Fortress constructed"
     flavor="${GREEN}⚒${RESET}  ${GREEN}The fortress stands strong.${RESET}"
+    ;;
+  extraction)
+    xp_gain=$XP_EXTRACTION
+    action_text="New shadow bound"
+    flavor="${PURPLE}◆${RESET} ${PURPLE}Shadow extracted — army registry updated.${RESET}"
+    ;;
+  bestiary)
+    xp_gain=$XP_BESTIARY
+    action_text="Knowledge preserved"
+    flavor="${PURPLE}†${RESET} ${PURPLE}Threat cataloged in the Bestiary.${RESET}"
     ;;
   *)
     exit 0

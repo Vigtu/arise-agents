@@ -45,7 +45,7 @@ update_army() {
   local temp_file=$(mktemp)
 
   awk -v table="$table" '
-    /^## Shadows/ { print; getline; print table; skip=1; next }
+    /^## Shadows/ { print; getline; print table; print ""; skip=1; next }
     /^## / && skip { skip=0 }
     !skip { print }
   ' "$ARMY_FILE" > "$temp_file"
