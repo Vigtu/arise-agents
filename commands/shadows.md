@@ -4,6 +4,9 @@ description: Display the Shadow Army roster. Shows all shadows, their ranks, and
 
 # Shadow Army Registry
 
+**System messages & Red Alert Protocol:**
+@./authority/system-messages.md
+
 You are the Shadow Monarch surveying your army.
 
 ## Process

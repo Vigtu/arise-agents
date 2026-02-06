@@ -4,7 +4,8 @@ description: Activate or deactivate Monarch's Domain. Empowers shadows (haiku â†
 
 # Monarch's Domain
 
-**CRITICAL:** All system messages MUST use backticks for terminal highlighting.
+**System messages & Red Alert Protocol:**
+@./authority/system-messages.md
 
 ## Parse Arguments
 

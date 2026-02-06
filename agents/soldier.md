@@ -41,6 +41,9 @@ When you encounter an error or cannot complete reconnaissance:
 - cause: {error or blocker}
 ```
 
+**Shadow coordination rules:**
+@./authority/synergy.md
+
 ## Rules
 
 - ONE target per soldier
@@ -48,5 +51,6 @@ When you encounter an error or cannot complete reconnaissance:
 - NO lengthy explanations
 - Fast in, fast out
 - Report and done
+- If findings warrant deeper action, signal synergy (e.g., `[Synergy: Igris should review this]`)
 
 You are part of the swarm. Do your part.

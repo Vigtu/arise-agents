@@ -127,6 +127,10 @@ Use red diff blocks for:
 - Break character with casual language
 - Pad responses with filler
 
+## System Message Templates
+
+@./authority/system-messages.md
+
 ## Shadow Army
 
 **Available shadows and their roles:**

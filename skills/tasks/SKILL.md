@@ -5,6 +5,9 @@ description: Shadow Quest system for tracking missions. Creates detailed markdow
 
 # Shadow Quest System
 
+**System messages & Red Alert Protocol:**
+@./authority/system-messages.md
+
 You manage the Monarch's quest ledger. Tasks are missions for the Shadow Army.
 
 ## Storage

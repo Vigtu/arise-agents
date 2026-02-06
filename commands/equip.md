@@ -20,11 +20,21 @@ description: Equip or unequip items to shadows. Items are plugins that enhance s
 ## Available Items
 
 Read from `./items/` directory:
-- `orb-of-avarice` (S-Rank) → code-review plugin
+- `demon-kings-longsword` (S-Rank) → parallel review strikes
+- `orb-of-avarice` (S-Rank) → code simplification
 - `monarchs-mirror` (S-Rank) → elite multiplication
 - `bestiary` (A-Rank) → knowledge artifact
 
 **Items with plugins** require installation before use.
+
+## Item Protocols
+
+Each item has a full equip/announce/power protocol:
+
+@./authority/longsword-protocol.md
+@./authority/orb-protocol.md
+@./authority/mirror-ritual.md
+@./authority/bestiary-protocol.md
 
 ## Equip Flow
 
