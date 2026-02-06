@@ -228,30 +228,31 @@ async function main() {
     }
   }
 
-  // Add spinner verbs (project-specific)
+  // Add spinner verbs (project-specific) with thematic colors
+  // Using \u001b (JSON standard) instead of \x1b (shell format) for better compatibility
   projectSettings.spinnerVerbs = {
     mode: 'replace',
     verbs: [
-      'Channeling dark energy',
-      'Consulting the shadows',
-      'The Monarch deliberates',
-      'Sensing mana flow',
-      'Shadows gathering',
-      'Extracting essence',
-      'Surveying the dungeon',
-      'The army stirs',
-      'Communing with Igris',
-      'Beru hunts for answers',
-      'Tusk sharpens his blade',
-      'Soldiers scouting ahead',
-      'Reading the Bestiary',
-      'Shadow exchange in progress',
-      'Opening a gate',
-      'Domain expanding',
-      'Analyzing threat level',
-      'The knight kneels in thought',
-      'Consuming knowledge',
-      'Forging the verdict',
+      '\u001b[35mChanneling dark energy\u001b[0m',           // Purple - Shadow Monarch
+      '\u001b[35mConsulting the shadows\u001b[0m',           // Purple - Shadow Monarch
+      '\u001b[38;2;164;128;242mThe Monarch deliberates\u001b[0m', // SSS Purple - Monarch
+      '\u001b[35mSensing mana flow\u001b[0m',                // Purple - Magic
+      '\u001b[35mShadows gathering\u001b[0m',                // Purple - Shadows
+      '\u001b[35mExtracting essence\u001b[0m',               // Purple - Shadow extraction
+      '\u001b[36mSurveying the dungeon\u001b[0m',            // Cyan - Exploration
+      '\u001b[35mThe army stirs\u001b[0m',                   // Purple - Army
+      '\u001b[34mCommuning with Igris\u001b[0m',             // Blue - Knight
+      '\u001b[32mBeru hunts for answers\u001b[0m',           // Green - Ant King
+      '\u001b[31mTusk sharpens his blade\u001b[0m',          // Red - Orc
+      '\u001b[36mSoldiers scouting ahead\u001b[0m',          // Cyan - Infantry
+      '\u001b[34mReading the Bestiary\u001b[0m',             // Blue - Igris's book
+      '\u001b[35mShadow exchange in progress\u001b[0m',      // Purple - Shadow ability
+      '\u001b[36mOpening a gate\u001b[0m',                   // Cyan - Dungeon
+      '\u001b[33mDomain expanding\u001b[0m',                 // Yellow - Power
+      '\u001b[36mAnalyzing threat level\u001b[0m',           // Cyan - Assessment
+      '\u001b[34mThe knight kneels in thought\u001b[0m',     // Blue - Igris
+      '\u001b[32mConsuming knowledge\u001b[0m',              // Green - Beru devouring
+      '\u001b[34mForging the verdict\u001b[0m',              // Blue - Igris judging
     ],
   };
 
