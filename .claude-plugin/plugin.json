@@ -13,7 +13,8 @@
     "./commands/equip.md",
     "./commands/extract.md",
     "./commands/shadows.md",
-    "./commands/status.md"
+    "./commands/status.md",
+    "./commands/haste.md"
   ],
   "agents": [
     "./agents/igris.md",

@@ -60,6 +60,31 @@ Enhanced capabilities:
 - Install: /plugin install {plugin-spec}
 ```
 
+## Haste Messages
+
+### Haste Activated
+```
+「 Temporal Acceleration 」
+
+[System: Haste Potion consumed]
+
+*time slows around the shadows*
+
+Output speed: 2.5x
+Mana drain: 6x standard cost
+Persists until deactivated. Use /haste again to cancel.
+```
+
+### Haste Deactivated
+```
+[System: Temporal field dissipated]
+
+*the shadows return to normal speed*
+
+Mana drain normalized.
+```
+
+
 ## General System
 
 ### Task Start

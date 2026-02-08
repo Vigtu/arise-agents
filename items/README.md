@@ -10,6 +10,7 @@
 | [Orb of Avarice](./orb-of-avarice.md) | S | Amplifier | Tusk | `orb-protocol.md` |
 | [Monarch's Mirror](./monarchs-mirror.md) | S | Artifact | Any Elite | `mirror-ritual.md` |
 | [Bestiary](./bestiary.md) | A | Grimoire | Igris | `bestiary-protocol.md` |
+| [Haste Potion](./haste-potion.md) | A | Session Buff | All | `haste-protocol.md` |
 
 ## Shadow Equipment
 
@@ -18,6 +19,12 @@
 | **Igris** | Demon King's Longsword | Legion Review (5 parallel agents, Bestiary integration) |
 | **Tusk** | Orb of Avarice | Desire for Destruction (code simplification) |
 | **Beru** | — | *Seeking artifact...* |
+
+## Session Buffs
+
+| Buff | Rank | Effect | Command |
+|------|------|--------|---------|
+| **Haste Potion** | A | 2.5x speed, 6x mana cost | `/haste` |
 
 ## Structure
 
